@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Compound</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- Fonts-->
+		<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+		<!-- 引入fonts -->
+		<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+		<!-- Vendors-->
+		<link rel="stylesheet" type="text/css" href="../assets/vendors/bootstrap/bootstrap.min.css">
+		<!-- css -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+</head>
+<body>
+	<!-- 定义头部 -->
+	<div class="head">
+		<div class="head-bg-img">
+			<img src="../assets/img/head-bg.png" alt="">
+		<div class="logo">
+			<img src="../assets/img/logo-shadow.png" alt="">
+		</div>
+		</div>
+		
+	<!-- 定义导航条 -->
+		<nav class="navbar navbar-default" role="navigation">
+		<ul class="nav navbar-nav">
+		<li><a href="/index">HOME</a></li>
+		<li class="dropdown dropdown-bg">
+				<a href="" class="dropdown-toggle" data-toggle="dropdown">
+					BROWSE
+				</a>
+					<ul class="dropdown-menu">
+					<li><a href="#">Commpound</a></li>
+					<li><a href="../Browse-Pathway.html">Pathway</a></li>
+					<li><a href="#">Target</a></li>
+				</ul>
+				
+			</li>
+		<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SEARCH</a>
+			<ul class="dropdown-menu">
+					<li><a href="../search-text.html">Text</a></li>
+					<li><a href="../Search-Structure.html">Structure</a></li>
+					<li><a href="#">Sequence</a></li>
+					
+			</ul>
+		</li>
+		<li><a href="../greeting">UPLOAD</a></li>
+		<li><a href="#">REFERENCES</a></li>
+		<li><a href="#">CITATION</a></li>
+		<li><a href="#">HELP</a></li>
+		</ul>
+		</nav>
+	</div>
+<!-- 定义头部结束 -->
+<div class="page"></div>
+<!-- 引入js -->
+<script src="../assets/vendors/_jquery/jquery-3.3.1.min.js"></script>
+<script src="../assets/vendors/bootstrap/bootstrap.min.js"></script>
+<script src="../assets/js/compound.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $.ajax({
+            url: "/browse-C",//写from 中的action
+            type: "get",
+            async: true,
+            contentType:'application/json',
+            success: function(data){
+                // console.log(data.type);
+                // console.log(data[0].ChemicalNames);
+
+                // JSON.stringify(list);
+                // alert(list.type)
+                // JSONArray json = JSONArray.fromObject(data);
+                alert("请求成功");
+                // console.log(list.toString());
+				console.log(data[0]);
+
+                var obj_1={
+                    obj_box:'.page',//翻页容
+                };
+                // console.log(json.length);
+                // console.log(data.type);
+                // console.log(data.length);
+                page_ctrl2(obj_1,data);
+            },
+            error: function(xhr, status,errorThrown){
+                alert("请求失败");
+                alert(errorThrown + ','+status+','+xhr.statusText);
+                //alert(XMLresponse);
+                alert($(err).ajaxError);
+            }
+        });
+
+    });
+
+</script>
+</body>
+</html>

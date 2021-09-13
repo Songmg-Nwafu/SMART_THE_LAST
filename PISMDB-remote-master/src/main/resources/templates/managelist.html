@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./static/assets/css2/layui.css">
+    <title>SMART</title>
+</head>
+<body>
+<div class="page" style="width: 80%;margin: 200px auto">
+    <table class="layui-hide" id="test"></table>
+</div>
+</body>
+<script src="./static/assets/js2/plugins/jquery-3.4.1.min.js"></script>
+<script src="./static/assets/js2/layui.all.js"></script>
+<script src="./static/assets/js2/laypage.js"></script>
+<script>
+    $(document).ready(function () {
+        //var total = 1219;
+        //initFPage(total);
+        $.ajax({
+            url: "http://39.101.176.205:4010/SMART/managecount?callback=?",//写from 中的action
+            type: "get",
+            async: true,
+            contentType: 'application/json',
+            dataType: "jsonp",  //数据格式设置为jsonp
+            jsonp: "callback",
+            success: function (data) {
+                var total = JSON.stringify(data);
+                //console.log(data);
+                //var total = 60;
+                //alert(total);
+                //var obj_1={
+                //    obj_box:'.page',//翻页容
+                //};
+                //page_ctrl2(obj_1,data);
+                console.log(total);
+
+                initPage(total);
+            },
+            error: function (xhr, status, errorThrown) {
+                alert("请求失败");
+                alert(errorThrown + ',' + status + ',' + xhr.statusText);
+                //alert(XMLresponse);
+                alert($(err).ajaxError);
+            }
+        });
+
+        function initPage(total) {
+            layui.use('table', function () {
+                var table = layui.table;
+                table.render({
+                    elem: '#test'
+                    , page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+                        limits: [10, 20, 30, 40, 50]
+                        , layout: ['count', 'prev', 'page', 'next', 'limit', 'skip'] //自定义分页布局
+                        , prev: "<<"
+                        , next: ">>"
+                        , theme: "#0b88dc"
+                        , count: total
+                    }
+                    , even: true
+                    , url: 'http://39.101.176.205:4010/SMART/checkInfo?callback=?'
+                    , method: 'get'
+                    , parseData: function (res) {
+                        var data = JSON.stringify(res);
+                        console.log(data);
+                        return {
+                            "code": 0,
+                            "msg": "",
+                            "count": total,
+                            "data": res
+                        };
+                    }
+                    , cols: [
+                        [
+                            {field: 'checkid', title: 'ID', sort: true}
+                            , {
+                            field: 'opid', title: 'Operation Id', sort: true, templet: function (res) {
+                                var a = '<a href="checkInfodatil?id=' + res.opid + '" target="_blank">' + res.opid + '</a>';
+                                return a;
+                            }
+                        }
+                            , {field: 'pismid', title: 'PISMID', sort: true}
+                            , {field: 'optype', title: 'Operation Type', sort: true}
+                            , {field: 'createdate', title: 'Create Date', sort: true,width : 200}
+                            , {field: 'username', title: 'User Name'}
+                            , {field: 'department', title: 'Department'}
+                            , {field: 'ischecked', title: 'Checked', sort: true}
+                            , {field: 'passed', title: 'Passed', sort: true}
+                        ]
+                    ]
+
+                });
+            });
+        }
+    });
+</script>
+</html>

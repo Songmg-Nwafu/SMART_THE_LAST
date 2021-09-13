@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+
+    <meta charset="utf-8"/>
+    <title>SMART</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description"/>
+    <meta content="Themesdesign" name="author"/>
+
+    <link href="./static/assets2/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Icons Css -->
+    <link href="./static/assets2/css/icons.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Bootstrap Css -->
+    <link href="./static/assets2/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" type="text/css" href="./static/assets/css2/xcConfirm.css"/>
+    <script src="./static/assets/js/jquery-1.9.1.min.js"></script>
+    <script src="./static/assets/js2/xcConfirm.js"></script>
+    <!-- App Css-->
+    <link href="./static/assets2/css/app.min.css" id="app-style" rel="stylesheet" type="text/css"/>
+    <style>
+        label {
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content">
+
+            <!-- start page title -->
+            <div class="page-title-box">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <div class="page-title">
+                                <h4 id="id_tittle"></h4>
+                                <!--  <ol class="breadcrumb m-0">
+                                     <li class="breadcrumb-item"><a href="javascript: void(0);">Morvin</a></li>
+                                     <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                     <li class="breadcrumb-item active">Form Wizard</li>
+                                 </ol> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+
+            <div class="container-fluid">
+
+                <div class="page-content-wrapper">
+
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-4"></h4>
+                                    <form id="siteForm">
+                                        <div id="progrss-wizard" class="twitter-bs-wizard">
+                                            <ul class="twitter-bs-wizard-nav nav-justified">
+                                                <li class="nav-item wizard-border">
+                                                    <a href="#progress-seller-details" class="nav-link"
+                                                       data-toggle="tab">
+                                                        <span class="step-number">01. Molecule</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item wizard-border">
+                                                    <a href="#progress-company-document" class="nav-link"
+                                                       data-toggle="tab">
+                                                        <span class="step-number">02. Targeting Protein</span>
+                                                    </a>
+                                                </li>
+
+                                                <li class="nav-item wizard-border">
+                                                    <a href="#progress-bank-detail" class="nav-link" data-toggle="tab">
+                                                        <span class="step-number" id="userinfo">03. User Information</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#progress-confirm-detail" class="nav-link"
+                                                       data-toggle="tab">
+                                                        <span class="step-number">04. Confirm Detail</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                            <div id="bar" class="progress mt-4">
+                                                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"></div>
+                                            </div>
+                                            <div class="tab-content twitter-bs-wizard-tab-content">
+
+                                                <div class="tab-pane" id="progress-seller-details">
+
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="iupacName">IUPAC
+                                                                    Name</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="iupacName"
+                                                                       name="iupacName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="chemicalName">Chemical
+                                                                    Name</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="chemicalName"
+                                                                       name="chemicalName">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="chemicalFormula">Chemical
+                                                                    Formula</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="chemicalFormula"
+                                                                       name="chemicalFormula">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="smiles">SMILES</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="smiles"
+                                                                       name="smiles">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="molecularWeight">Molecular
+                                                                    Weight</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="molecularWeight"
+                                                                       name="molecularWeight">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="alogp">
+                                                                    Alog P</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="alogp"
+                                                                       name="alogp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="2D_structure">2D
+                                                                    structure(.png)</label>
+                                                                <input type="file" class="form-control"
+                                                                       id="2D_structure" accept="image/png"
+                                                                       style="display:none"
+                                                                       onchange="changeAgentContent_2D()">
+                                                                <div class="row">
+                                                                    <div class="col-lg-2">
+                                                                        <input type="button" class="form-control"
+                                                                               onclick="document.getElementById('2D_structure').click()"
+                                                                               value="Browse"/>
+                                                                    </div>
+                                                                    <div class="col-lg-10">
+                                                                        <input type="text" class="form-control"
+                                                                               value="No file to choose" disabled
+                                                                               id="inputFileAgent_2D"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="3D_structure">3D
+                                                                    structure(.mol2)</label>
+                                                                <input type="file" class="form-control"
+                                                                       id="3D_structure" accept=".mol2"
+                                                                       style="display:none"
+                                                                       onchange="changeAgentContent_3D()">
+                                                                <div class="row">
+                                                                    <div class="col-lg-2">
+                                                                        <input type="button" class="form-control"
+                                                                               onclick="document.getElementById('3D_structure').click()"
+                                                                               value="Browse"/>
+                                                                    </div>
+                                                                    <div class="col-lg-10">
+                                                                        <input type="text" class="form-control"
+                                                                               value="No file to choose" disabled
+                                                                               id="inputFileAgent_3D"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="function">Function &
+                                                                    Phenotype</label>
+                                                                <textarea id="function"
+                                                                          class="form-control" rows="3"
+                                                                          name="functionandphen"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <ul class="pager wizard twitter-bs-wizard-pager-link">
+                                                        <li class="next"><a href="#">Next<i
+                                                                class="mdi mdi-arrow-right ms-1"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane" id="progress-company-document">
+                                                    <div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Protein</label>
+
+                                                                    <select class="select2 form-control select2-multiple"
+                                                                            multiple="multiple"
+                                                                            data-placeholder="Choose ..."
+                                                                            name="protein" id="proteinList">
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Pathway</label>
+
+                                                                    <select class="select2 form-control select2-multiple"
+                                                                            multiple="multiple"
+                                                                            data-placeholder="Choose ..."
+                                                                            name="pathway" id="pathway">
+                                                                        <option value="PP001">Cell Wall Synthesis
+                                                                        </option>
+                                                                        <option value="PP002">Membrane Trafficking
+                                                                        </option>
+                                                                        <option value="PP003">Auxin Signaling</option>
+                                                                        <option value="PP004">ABA Signaling</option>
+                                                                        <option value="PP005">Ethylene Signaling
+                                                                        </option>
+                                                                        <option value="PP006">Gibberellin Signaling
+                                                                        </option>
+                                                                        <option value="PP007">JA Signaling</option>
+                                                                        <option value="PP008">SA Signaling</option>
+                                                                        <option value="PP009">BR Signaling</option>
+                                                                        <option value="PP010">SL Signaling</option>
+                                                                        <option value="PP011">Others</option>
+                                                                    </select>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="supplementary">Supplementary About Molecule</label>
+                                                                    <textarea id="supplementary"
+                                                                              class="form-control"
+                                                                              rows="3" name="supplementary"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-muted mb-3 font-18">
+                                                            If the protein does not exist in the SMART database, you can
+                                                            add it here：
+                                                        </p>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="progress-basicpill-cstno-input">Protein
+                                                                        Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                           id="progress-basicpill-cstno-input"
+                                                                           name="proteinName">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="progress-basicpill-servicetax-input">Uniprot
+                                                                        ID(split by ",")</label>
+                                                                    <input type="text" class="form-control"
+                                                                           id="progress-basicpill-servicetax-input"
+                                                                           name="uniprotID">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="progress-basicpill-companyuin-input">Organism</label>
+                                                                    <input type="text" class="form-control"
+                                                                           id="progress-basicpill-companyuin-input"
+                                                                           name="organism">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="sequence">Sequence(.fasta)</label>
+                                                                    <input type="file" class="form-control"
+                                                                           id="sequence"
+                                                                           accept=".fasta" style="display:none"
+                                                                           onchange="changeAgentContent_sequence()">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-2">
+                                                                            <input type="button" class="form-control"
+                                                                                   onclick="document.getElementById('sequence').click()"
+                                                                                   value="Browse"/>
+                                                                        </div>
+                                                                        <div class="col-lg-10">
+                                                                            <input type="text" class="form-control"
+                                                                                   value="No file to choose" disabled
+                                                                                   id="inputFileAgent_sequence"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <ul class="pager wizard twitter-bs-wizard-pager-link">
+                                                            <li class="previous"><a href="#"><i
+                                                                    class="mdi mdi-arrow-left me-1"></i>
+                                                                Prev</a></li>
+                                                            <li class="next"><a href="#">Next<i
+                                                                    class="mdi mdi-arrow-right ms-1"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="progress-bank-detail">
+                                                    <div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="username">Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                           id="username"
+                                                                           name="userName">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label>Department</label>
+                                                                    <input type="text" class="form-control"
+                                                                           id="department"
+                                                                           name="department">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label" for="email">Email
+                                                                        address</label>
+                                                                    <input id="email"
+                                                                           class="form-control input-mask"
+                                                                           data-inputmask="'alias': 'email'"
+                                                                           name="emailAddress">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <ul class="pager wizard twitter-bs-wizard-pager-link">
+                                                            <li class="previous"><a href="#"><i
+                                                                    class="mdi mdi-arrow-left me-1"></i>
+                                                                Prev</a></li>
+                                                            <li class="next"><a href="#">Next <i
+                                                                    class="mdi mdi-arrow-right ms-1"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane" id="progress-confirm-detail">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-lg-6">
+                                                            <div class="text-center">
+                                                                <div class="mb-4">
+                                                                    <i class="mdi mdi-check-circle-outline text-success display-4"></i>
+                                                                </div>
+                                                                <div>
+                                                                    <h5>Confirm Detail</h5>
+                                                                    <p class="text-muted">If you have any questions,
+                                                                        please <a href="citingus">contact
+                                                                            with us</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <ul class="pager wizard twitter-bs-wizard-pager-link">
+                                                        <li class="previous"><a href="#"><i
+                                                                class="mdi mdi-arrow-left me-1"></i>
+                                                            Prev</a></li>
+                                                        <li class="float-end"><a href="javascript:;" id="confirm"
+                                                                                 onclick="confirm_upload()">Confirm <i
+                                                                class="mdi mdi-arrow-right ms-1"></i></a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+
+                </div>
+
+
+            </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+
+    </div>
+    <!-- END layout-wrapper -->
+
+</div>
+
+<script src="./static/assets2/libs/jquery/jquery.min.js"></script>
+<script src="./static/assets2/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- twitter-bootstrap-wizard js -->
+<script src="./static/assets2/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="./static/assets2/libs/twitter-bootstrap-wizard/prettify.js"></script>
+
+<!-- form wizard init -->
+<script src="./static/assets2/js/pages/form-wizard.init.js"></script>
+<script src="./static/assets2/libs/select2/js/select2.min.js"></script>
+
+<!-- form mask -->
+<script src="./static/assets2/libs/inputmask/jquery.inputmask.min.js"></script>
+
+
+<!-- form mask init -->
+<script src="./static/assets2/js/pages/form-mask.init.js"></script>
+
+<script src="./static/assets2/js/pages/form-advanced.init.js"></script>
+
+<script src="./static/assets2/libs/select2/js/select2.min.js"></script>
+<script type="text/javascript">
+    function changeAgentContent_2D() {
+        document.getElementById("inputFileAgent_2D").value = document.getElementById("2D_structure").value;
+    }
+
+    function changeAgentContent_3D() {
+        document.getElementById("inputFileAgent_3D").value = document.getElementById("3D_structure").value;
+    }
+
+    function changeAgentContent_sequence() {
+        document.getElementById("inputFileAgent_sequence").value = document.getElementById("sequence").value;
+    }
+
+    function confirm_upload(){
+        var option = {
+            title: "Tip",
+            btn: parseInt("0011",2),
+            onOk: function(){
+                upload_form()
+            },
+            onCancel: function (){
+                return;
+            }
+        }
+        window.wxc.xcConfirm("Are you sure to submit?", "custom", option);
+    }
+
+    function upload_form() {
+        let tmp = window.location.href.split("id=")[1]
+        let pismid = tmp.split("#")[0];
+        let username = $.trim($("#username").val());
+        let department = $.trim($("#department").val());
+        let email = $.trim($("#email").val());
+
+        if(department == "" || username == "" || email == ""){
+            var option = {
+                title: "Warning",
+                btn: parseInt("0001",2),
+                onOk: function(){
+                    $("#userinfo")[0].click();
+                    return;
+                }
+            }
+            window.wxc.xcConfirm("You need to complete the user information", "custom", option);
+            return;
+        }
+
+
+        let data = new FormData(document.getElementById("siteForm"));
+        let targetlist = checkselect('proteinList');
+        let pathwaylist = checkselect('pathway');
+        data.set("pismid",pismid);
+        data.set("protein",targetlist);
+        data.set("pathway",pathwaylist);
+        data.set("2Dfile",$("#2D_structure").get(0).files[0]);
+        data.set("3Dfile",$("#3D_structure").get(0).files[0]);
+        data.set("sequencefile",$("#sequence").get(0).files[0]);
+
+        let files = "";
+        if (typeof ($("#2D_structure").get(0).files[0]) == "undefined" || $("#2D_structure").get(0).files[0].size <= 0){
+            files += "0,";
+        } else {
+            files += "1,";
+        }
+        if (typeof ($("#3D_structure").get(0).files[0]) == "undefined" || $("#3D_structure").get(0).files[0].size <= 0){
+            files += "0,";
+        } else {
+            files += "1,";
+        }
+        if (typeof ($("#sequence").get(0).files[0]) == "undefined" || $("#sequence").get(0).files[0].size <= 0){
+            files += "0,";
+        } else {
+            files += "1,";
+        }
+
+        files = files.substr(0,files.length-1);
+
+        data.set("files",files);
+
+        $.ajax({
+            url : "http://39.101.176.205:4010/SMART/correction",
+            type : "post",
+            data : data,
+            dataType : "text",
+            contentType : false,
+            processData : false,
+            success : function(result) {
+                var option = {
+                    title: "Success",
+                    btn: parseInt("0001",2),
+                    onOk: function(){
+
+                    }
+                }
+                window.wxc.xcConfirm("Thank you for your Contribution", "custom", option);
+            },
+            error : function () {
+
+            }
+        })
+
+    }
+    function checkselect(objname){
+        var intvalue="";
+        o = document.getElementById(objname);
+        for(let i=0;i<o.length;i++){
+            if(o.options[i].selected){
+                intvalue+=o.options[i].value+"%%";
+            }
+        }
+        return intvalue.substr(0,intvalue.length-2);
+    }
+    function initTargetSelect(data){
+        for(var i = 0;i < data.allTargets.length;i++)
+        {
+            $("#proteinList").append('<option value="'+data.allTargets[i].targetID+'">'+data.allTargets[i].targetID+"&nbsp;&nbsp;"+data.allTargets[i].proteinName+'</option>');
+        }
+    }
+    function initAllValues(data){
+        $("#iupacName").val(data.compounds.iUPAC_Name);
+        $("#chemicalName").val(data.compounds.chemicalNames);
+        $("#chemicalFormula").val(data.compounds.chemicalFormular);
+        $("#smiles").val(data.compounds.smiles);
+        $("#molecularWeight").val(data.compounds.molecularWeight);
+        $("#alogp").val(data.compounds.alogP);
+        $("#function").val(data.compounds.function);
+
+        let tarArr = new Array();
+        for (let i = 0; i < data.targetsList.length; i++){
+            let role = data.targetsList[i].targetID;
+            tarArr[i] = role;
+           /* alert(role);*/
+            /*$("#proteinList option[value='"+role+"']").attr("selected","true");*/
+        }
+        $("#proteinList").val(tarArr).trigger('change');
+
+        let pathArr = new Array();
+        for (let i = 0; i < data.pathwaysList.length; i++){
+            let role = data.pathwaysList[i].pathwayID;
+            pathArr[i] = role;
+            /*alert(role);*/
+            /*$("#pathway option[value='"+role+"']").attr("selected","true");*/
+        }
+        $("#pathway").val(pathArr).trigger('change');
+    }
+</script>
+<script>
+    $(document).ready(function () {
+
+        let tmp = window.location.href.split("id=")[1]
+        let pismid = tmp.split("#")[0];
+        $("#id_tittle").text(pismid);
+        $.ajax({
+            url: "http://39.101.176.205:4010/SMART/compoundsAndprotein?callback=?",
+            type: "get",
+            async: true,
+            dataType: "jsonp",  //数据格式设置为jsonp
+            jsonp: "callback",
+            data: {
+                pismid: pismid
+            },
+            contentType: 'application/json',
+            success: function (data) {
+                console.log(data);
+                initTargetSelect(data);
+                initAllValues(data);
+            }
+        })
+    })
+</script>
+<!-- <script src="assets/js/app.js"></script> -->
+
+</body>
+</html>

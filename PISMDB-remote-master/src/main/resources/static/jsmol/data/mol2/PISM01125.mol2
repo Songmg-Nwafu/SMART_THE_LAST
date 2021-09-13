@@ -1,0 +1,56 @@
+#	Name:			PISM01125
+#	Creating user name:	14062
+#	Creation time:		Sat Apr 06 23:11:40 2019
+
+#	Modifying user name:	14062
+#	Modification time:	Sat Apr 06 23:12:38 2019
+
+@<TRIPOS>MOLECULE
+PISM01125
+   17    17     1     1     0
+SMALL
+GAST_HUCK
+
+
+@<TRIPOS>ATOM
+      1 O1         -1.6465    1.5476    1.1037 O.2       1 BENZYL     -0.3650 
+      2 C1         -0.6305    0.8799    1.1882 C.2       1 BENZYL      0.2522 
+      3 C2          0.3402    0.8688    0.0247 C.ar      1 BENZYL      0.0801 
+      4 C3         -0.1792    0.8669   -1.2741 C.ar      1 BENZYL     -0.0378 
+      5 C4          0.6718    0.7226   -2.3713 C.ar      1 BENZYL      0.0328 
+      6 C5          2.0453    0.5845   -2.1648 C.ar      1 BENZYL     -0.0409 
+      7 C6          2.5734    0.6519   -0.8725 C.ar      1 BENZYL      0.0635 
+      8 C7          1.7281    0.8559    0.2290 C.ar      1 BENZYL      0.0732 
+      9 O9         -0.4358    0.1802    2.3087 O.3       1 BENZYL     -0.2956 
+     10 N10         2.2398    1.0571    1.4708 N.pl3     1 BENZYL     -0.3312 
+     11 Cl11        4.3087    0.4870   -0.6739 Cl        1 BENZYL     -0.0801 
+     12 Cl12        0.0199    0.7101   -3.9970 Cl        1 BENZYL     -0.0815 
+     13 H1         -1.2476    0.9694   -1.4357 H         1 BENZYL      0.0646 
+     14 H2          2.7042    0.4286   -3.0125 H         1 BENZYL      0.0633 
+     15 H3          0.3025   -0.4140    2.2593 H         1 BENZYL      0.2519 
+     16 H4          3.1933    0.7464    1.7083 H         1 BENZYL      0.1753 
+     17 H5          1.7019    1.5781    2.1817 H         1 BENZYL      0.1753 
+@<TRIPOS>BOND
+     1    2    3 1    
+     2    3    4 ar   
+     3    3    8 ar   
+     4    8    7 ar   
+     5    7    6 ar   
+     6    6    5 ar   
+     7    5    4 ar   
+     8    2    1 2    
+     9    2    9 1    
+    10    8   10 1    
+    11    7   11 1    
+    12    5   12 1    
+    13    4   13 1    
+    14    6   14 1    
+    15    9   15 1    
+    16   10   16 1    
+    17   10   17 1    
+@<TRIPOS>SUBSTRUCTURE
+     1 BENZYL      2 PERM              0 ****  ****    0 ROOT 
+@<TRIPOS>NORMAL
+@<TRIPOS>FF_PBC
+FORCE_FIELD_SETUP_FEATURE Force Field Setup information
+v1.0  0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 NONE 0 0 0 0 1 0 0 0 0 0 0 0 0

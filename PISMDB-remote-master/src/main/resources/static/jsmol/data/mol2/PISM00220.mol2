@@ -1,0 +1,30 @@
+#	Name:			M00220
+#	Creating user name:	XiyangLee
+#	Creation time:		Tue Aug 31 18:07:38 2021
+
+#	Modifying user name:	XiyangLee
+#	Modification time:	Tue Aug 31 18:08:16 2021
+
+@<TRIPOS>MOLECULE
+M00220
+    3     2     1     1     1
+SMALL
+GAST_HUCK
+****
+From 3DB ct
+@<TRIPOS>ATOM
+      1 O          -0.6439   -0.0299   -0.0286 O.2       1 <1>        -0.1949 
+      2 N           0.5894    0.0294    0.0280 N.2       1 <1>        -0.0765 
+      3 H           1.0345    0.6836    0.6525 H         1 <1>         0.2714 
+@<TRIPOS>BOND
+     1    1    2 2    
+     2    2    3 1    
+@<TRIPOS>SUBSTRUCTURE
+     1 ****        1 TEMP              0 ****  ****    0 ROOT 
+@<TRIPOS>SET
+UNITY_3DHIT     STATIC     ATOMS    <user>   **** Atoms matching 3D or FLEX Search
+0
+@<TRIPOS>NORMAL
+@<TRIPOS>FF_PBC
+FORCE_FIELD_SETUP_FEATURE Force Field Setup information
+v1.0  0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 NONE 0 0 0 0 1 0 0 0 0 0 0 0 0

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nwafu.PISMDB.dao.TargetsDao">
+    <resultMap id="TargetMap" type="com.nwafu.PISMDB.entity.Targets">
+        <id column="TargetID" property="TargetID" jdbcType="VARCHAR"></id>
+        <result column="UniprotID" property="UniprotID" jdbcType="VARCHAR"></result>
+        <result column="ProteinName" property="ProteinName" jdbcType="VARCHAR"></result>
+        <result column="Organisml" property="Organisml" jdbcType="VARCHAR"></result>
+        <result column="Sequencel" property="Sequencel" jdbcType="VARCHAR"></result>
+        <result column="PDBID" property="PDBID" jdbcType="VARCHAR"></result>
+        <result column="PISMID" property="PISMID" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="getTargetsCount" resultType="java.lang.Integer">
+        select count(*)
+        from target
+    </select>
+
+
+    <select id="findTargetById" resultMap="TargetMap">
+        select *
+        from target
+    </select>
+
+
+    <!--<select id="findById" resultMap="CompoundsMap">-->
+     <!--select *-->
+     <!--from compound-->
+    <!--</select>-->
+    <!--&lt;!&ndash;BasicInformation数据信息&ndash;&gt;-->
+    <!--<resultMap id="BasicInformation" type="com.nwafu.PISMDB.entity.Compounds">-->
+        <!--<id column="PISMID" property="PISMID" jdbcType="VARCHAR"></id>-->
+        <!--<result column="IUPAC_Name" property="IUPAC_Name" jdbcType="VARCHAR"></result>-->
+        <!--<result column="ChemicalFormular" property="ChemicalFormular" jdbcType="VARCHAR"></result>-->
+        <!--<result column="AlogP" property="AlogP" jdbcType="VARCHAR"></result>-->
+        <!--<result column="Smiles" property="Smiles" jdbcType="VARCHAR"></result>-->
+    <!--</resultMap>-->
+
+    <!--<select id="FindBasicInformation" resultMap="BasicInformation">-->
+        <!--select *-->
+        <!--from compound-->
+    <!--</select>-->
+
+    <!--&lt;!&ndash;Pathway数据信息&ndash;&gt;-->
+    <!--<resultMap id="Pathway" type="com.nwafu.PISMDB.entity.Compounds">-->
+        <!--<id column="PISMID" property="PISMID" jdbcType="VARCHAR"></id>-->
+        <!--<result column="IUPAC_Name" property="IUPAC_Name" jdbcType="VARCHAR"></result>-->
+        <!--<result column="ChemicalFormular" property="ChemicalFormular" jdbcType="VARCHAR"></result>-->
+        <!--<result column="AlogP" property="AlogP" jdbcType="VARCHAR"></result>-->
+        <!--<result column="Smiles" property="Smiles" jdbcType="VARCHAR"></result>-->
+    <!--</resultMap>-->
+
+    <!--<select id="FindPathway" resultMap="Pathway">-->
+        <!--select *-->
+        <!--from compound-->
+    <!--</select>-->
+
+    <!--&lt;!&ndash;RelatedInformation数据信息&ndash;&gt;-->
+    <!--<resultMap id="RelatedInformation" type="com.nwafu.PISMDB.entity.Compounds">-->
+        <!--<id column="PISMID" property="PISMID" jdbcType="VARCHAR"></id>-->
+        <!--<result column="IUPAC_Name" property="IUPAC_Name" jdbcType="VARCHAR"></result>-->
+        <!--<result column="ChemicalFormular" property="ChemicalFormular" jdbcType="VARCHAR"></result>-->
+        <!--<result column="AlogP" property="AlogP" jdbcType="VARCHAR"></result>-->
+        <!--<result column="Smiles" property="Smiles" jdbcType="VARCHAR"></result>-->
+    <!--</resultMap>-->
+
+    <!--<select id="FindRelatedInformation" resultMap="RelatedInformation">-->
+        <!--select *-->
+        <!--from compound-->
+    <!--</select>-->
+
+
+    <!--&lt;!&ndash;SupportingInformation数据信息&ndash;&gt;-->
+    <!--<resultMap id="SupportingInformation" type="com.nwafu.PISMDB.entity.Compounds">-->
+        <!--<id column="PISMID" property="PISMID" jdbcType="VARCHAR"></id>-->
+        <!--<result column="IUPAC_Name" property="IUPAC_Name" jdbcType="VARCHAR"></result>-->
+        <!--<result column="ChemicalFormular" property="ChemicalFormular" jdbcType="VARCHAR"></result>-->
+        <!--<result column="AlogP" property="AlogP" jdbcType="VARCHAR"></result>-->
+        <!--<result column="Smiles" property="Smiles" jdbcType="VARCHAR"></result>-->
+    <!--</resultMap>-->
+
+    <!--<select id="FindSupportingInformation" resultMap="SupportingInformation">-->
+        <!--select *-->
+        <!--from compound-->
+    <!--</select>-->
+</mapper>

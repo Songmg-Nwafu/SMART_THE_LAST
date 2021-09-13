@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nwafu.PISMDB.dao.CompoundsDao">
+    <resultMap id="CompoundsMap" type="com.nwafu.PISMDB.entity.Compounds">
+        <id column="PISMID" property="PISMID" jdbcType="VARCHAR"></id>
+        <result column="TargetID" property="TargetID" jdbcType="VARCHAR"></result>
+        <result column="PathwayID" property="PathwayID" jdbcType="VARCHAR"></result>
+        <result column="Version" property="Version" jdbcType="VARCHAR"></result>
+        <result column="CreationDate" property="CreationDate" jdbcType="VARCHAR"></result>
+        <result column="UpdateDate" property="UpdateDate" jdbcType="VARCHAR"></result>
+        <result column="ChemicalNames" property="ChemicalNames" jdbcType="VARCHAR"></result>
+        <result column="IUPAC_Name" property="IUPAC_Name" jdbcType="VARCHAR"></result>
+        <result column="OtherNames" property="OtherNames" jdbcType="VARCHAR"></result>
+        <result column="ChemicalFormular" property="ChemicalFormular" jdbcType="VARCHAR"></result>
+        <result column="MolecularWeight" property="MolecularWeight" jdbcType="VARCHAR"></result>
+        <result column="AlogP" property="AlogP" jdbcType="VARCHAR"></result>
+        <result column="ThreeD_Structure" property="ThreeD_Structure" jdbcType="VARCHAR"></result>
+        <result column="Structure" property="Structure" jdbcType="VARCHAR"></result>
+        <result column="Smiles" property="Smiles" jdbcType="VARCHAR"></result>
+        <result column="Function" property="Function" jdbcType="VARCHAR"></result>
+        <result column="Mechanism" property="Mechanism" jdbcType="VARCHAR"></result>
+        <result column="Phenotype" property="Phenotype" jdbcType="VARCHAR"></result>
+        <result column="GroupDescription" property="GroupDescription" jdbcType="VARCHAR"></result>
+        <result column="StructureActivityRelationship" property="StructureActivityRelationship"
+                jdbcType="VARCHAR"></result>
+        <result column="StructuralSimilarity" property="StructuralSimilarity" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="getCompoundsCount" resultType="java.lang.Integer">
+        select count(*)
+        from compound
+    </select>
+
+    <select id="findById" resultMap="CompoundsMap">
+     select *
+     from compound
+    </select>
+<!--BasicInformation数据信息-->
+    <resultMap id="BasicInformation" type="com.nwafu.PISMDB.entity.CompoundsBasicInformationBean">
+        <id column="PISMID" property="PISMID" jdbcType="VARCHAR"></id>
+        <result column="ChemicalNames" property="ChemicalNames" jdbcType="VARCHAR"></result>
+        <result column="IUPAC_Name" property="IUPAC_Name" jdbcType="VARCHAR"></result>
+        <result column="ChemicalFormular" property="ChemicalFormular" jdbcType="VARCHAR"></result>
+        <result column="AlogP" property="AlogP" jdbcType="VARCHAR"></result>
+        <result column="Smiles" property="Smiles" jdbcType="VARCHAR"></result>
+        <result column="Function" property="Function" jdbcType="VARCHAR"></result>
+        <result column="Mechanism" property="Mechanism" jdbcType="VARCHAR"></result>
+        <result column="Phenotype" property="Phenotype" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="FindBasicInformation" resultMap="BasicInformation">
+        select *
+        from compound
+    </select>
+
+    <!--Pathway数据信息-->
+    <resultMap id="Pathway" type="com.nwafu.PISMDB.entity.Compounds">
+        <id column="PISMID" property="PISMID" jdbcType="VARCHAR"></id>
+        <result column="IUPAC_Name" property="IUPAC_Name" jdbcType="VARCHAR"></result>
+        <result column="ChemicalFormular" property="ChemicalFormular" jdbcType="VARCHAR"></result>
+        <result column="AlogP" property="AlogP" jdbcType="VARCHAR"></result>
+        <result column="Smiles" property="Smiles" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="FindPathway" resultMap="Pathway">
+        select *
+        from compound
+    </select>
+
+    <!--RelatedInformation数据信息-->
+    <resultMap id="RelatedInformation" type="com.nwafu.PISMDB.entity.Compounds">
+        <id column="PISMID" property="PISMID" jdbcType="VARCHAR"></id>
+        <result column="IUPAC_Name" property="IUPAC_Name" jdbcType="VARCHAR"></result>
+        <result column="ChemicalFormular" property="ChemicalFormular" jdbcType="VARCHAR"></result>
+        <result column="AlogP" property="AlogP" jdbcType="VARCHAR"></result>
+        <result column="Smiles" property="Smiles" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="FindRelatedInformation" resultMap="RelatedInformation">
+        select *
+        from compound
+    </select>
+
+    <!--SupportingInformation数据信息-->
+    <resultMap id="SupportingInformation" type="com.nwafu.PISMDB.entity.Compounds">
+        <id column="PISMID" property="PISMID" jdbcType="VARCHAR"></id>
+        <result column="IUPAC_Name" property="IUPAC_Name" jdbcType="VARCHAR"></result>
+        <result column="ChemicalFormular" property="ChemicalFormular" jdbcType="VARCHAR"></result>
+        <result column="AlogP" property="AlogP" jdbcType="VARCHAR"></result>
+        <result column="Smiles" property="Smiles" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="FindSupportingInformation" resultMap="SupportingInformation">
+        select *
+        from compound
+    </select>
+
+    <!--<sql id="Base_Column_List">PISMID,TargetID,PathwayID,Version,CreationDate,UpdateDate,ChemicalNames,IUPAC_Name,OtherNames,ChemicalFormular,MolecularWeight,AlogP,ThreeD_Structure,Structure,Smiles,Mechanism,Phenotype,GroupDescription,StructureActivityRelationship,StructuralSimilarity</sql>-->
+    <!--<sql id="RelatedCompounds">RelatedCompoundsPISMID,PISMID,RelatedCompoundsName;</sql>-->
+    <resultMap id="PicturesMap" type="com.nwafu.PISMDB.entity.Pictures">
+        <id column="id" property="id" jdbcType="INTEGER"></id>
+        <result column="startX" property="startX" jdbcType="FLOAT"></result>
+        <result column="startY" property="startY" jdbcType="FLOAT"></result>
+        <result column="endX" property="endX" jdbcType="FLOAT"></result>
+        <result column="endY" property="endY" jdbcType="FLOAT"></result>
+        <result column="information" property="information" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="showPictureInformation" resultMap="PicturesMap">
+        select *
+        from places
+    </select>
+
+    <resultMap id="PicturesMap2" type="com.nwafu.PISMDB.entity.Pic">
+        <id column="id" property="id" jdbcType="INTEGER"></id>
+        <result column="desc" property="desc" jdbcType="VARCHAR"></result>
+        <result column="url" property="url" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="showPictures" resultMap="PicturesMap2">
+        select *
+        from pictures
+    </select>
+</mapper>

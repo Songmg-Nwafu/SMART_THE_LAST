@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: PISMDB
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: zhushai
+Implementation-Vendor-Id: com.nwafu
+Created-By: IntelliJ IDEA
+Build-Jdk: 9.0.1
+Main-Class: ${start-class}
+

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="renderer" content="webkit|id-comp|ie-stand">
+  <title>SMART</title>
+  <!-- Vendor Stylesheets -->
+  <!--<link href="./static/assets/css/reset.css" rel="stylesheet" type="text/css">-->
+  <link rel="stylesheet" href="./static/assets/css2/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/assets/css2/plugins/animate.min.css">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="./static/assets/fonts/flaticon/flaticon.css">
+  <link rel="stylesheet" href="./static/assets/css2/plugins/font-awesome.min.css">
+  <!-- Tilakam Style sheet -->
+  <link rel="stylesheet" href="./static/assets/css2/style.css">
+  <link rel="stylesheet" href="./static/assets/css2/responsive.css">
+  <!-- MyStyle -->
+  <!--<link rel="stylesheet" href="./static/assets/css2/mystyle.css">-->
+  <link rel="stylesheet" href="./static/assets/css2/mystyle.css">
+  
+  <link rel="stylesheet" type="text/css" href="./static/assets/css2/xcConfirm.css"/>
+  <script src="./static/assets/js/jquery-1.9.1.min.js"></script>
+  <script src="./static/assets/js2/xcConfirm.js"></script>
+  <!-- Vendor Scripts -->
+  <script src="./static/assets/js2/plugins/jquery-3.4.1.min.js"></script>
+  <script src="./static/assets/js2/plugins/popper.min.js"></script>
+  <script src="./static/assets/js2/plugins/bootstrap.min.js"></script>
+  <script src="./static/assets/js2/plugins/imagesloaded.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.magnific-popup.min.js"></script>
+
+
+  <script src="./static/assets/js2/plugins/jquery.countdown.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.waypoints.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.counterup.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.zoom.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.inview.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.event.move.js"></script>
+
+  <script src="./static/assets/js2/plugins/wow.min.js"></script>
+  <script src="./static/assets/js2/plugins/isotope.pkgd.min.js"></script>
+  <script src="./static/assets/js2/plugins/slick.min.js"></script>
+  <script src="./static/assets/js2/plugins/ion.rangeSlider.min.js"></script>
+
+  <!-- Tilakam Scripts -->
+  <script src="./static/assets/js2/main.js"></script>
+<!--  <script language="javascript">
+    let data2;
+    let pathwayId = window.location.href.split("id=")[1]
+    if(pathwayId != undefined){
+      pathwayId = Number(pathwayId.substring(pathwayId.length-2,pathwayId.length)) - 1;
+    }  else pathwayId = 0;
+
+  </script>-->
+     <style>
+      .img-box{
+        width: 770px;
+        height: 580px;
+      }
+      .nav-list{
+        margin-top: 35px;
+      }
+      .ulist ul{list-style: none}
+      .a_li{padding-left:40px;background:url('./static/img/A.png') no-repeat;background-size:15px 15px;background-position: 10px 10px;}
+      .ag_li{padding-left:40px;background:url('./static/img/AG.png') no-repeat;background-size:35px 35px;}
+      .i_li{padding-left:40px;background:url('./static/img/I.png') no-repeat;background-size:15px 15px;background-position: 10px 10px;}
+      .ig_li{padding-left:40px;background:url('./static/img/IG.png') no-repeat;background-size:35px 35px;}
+     </style>
+</head>
+
+<body>
+
+
+
+<!-- Header Start -->
+<header class="sigma_header header-1 can-sticky header-absolute header-light">
+
+  <!-- Middle Header Start -->
+  <div class="sigma_header-middle">
+    <div class="container">
+      <nav class="navbar">
+
+        <!-- Logo Start -->
+        <div class="sigma_logo-wrapper">
+          <a class="navbar-brand" href="index">
+            <img src="./static/assets/img/SMART_logo2.svg" alt="logo">
+          </a>
+        </div>
+        <!-- Logo End -->
+
+        <ul class="navbar-nav">
+          <li class="menu-item">
+            <a href="index">Home</a>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Browse</a>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="Browse_C">Molecule</a>
+              </li>
+              <li class="menu-item">
+                <a href="Browse_P">Pathway</a>
+              </li>
+              <li class="menu-item">
+                <a href="Browse_T">Target</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Search</a>
+            <ul class="sub-menu">
+              <li class="menu-item"> <a href="Search_text">Text</a> </li>
+              <li class="menu-item"> <a href="Search_Structure">Structure</a> </li>
+              <li class="menu-item"> <a href="Search_sequence">Sequence</a> </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Download</a>
+            <ul class="sub-menu">
+              <li class="menu-item"> <a href="./static/download/SMILES.zip">2D structure files</a> </li>
+              <li class="menu-item"> <a href="./static/download/mol2.zip">3D structure files</a> </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="greeting">Contribute</a>
+          </li>
+          <li class="menu-item">
+            <a href="help">Help</a>
+          </li>
+          <li class="menu-item">
+            <a href="citingus">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- Middle Header End -->
+
+</header>
+<!-- Header End -->
+
+
+  <!-- Banner Start -->
+  <div class="sigma_banner banner-3" style="height: 105px;background-image: url('./static/assets/img/head-stat.png');">
+  </div>
+  
+  <!-- 定义右边效果开始 -->
+<div class="right-content">
+  <div class="name" id="pathwayName"></div>
+  <form action="">
+    <input type="text" id="searchPathway" list="searchList" maxlength="20"  autocomplete="off" placeholder="pathways">
+    <input type="button" value="Go" id="submitPathway" class="button">
+    <datalist id="searchList" style="display:none;">
+    </datalist>
+  </form>
+  <div class="main">
+    <div class="pathway-img">
+      <div class="img-box" id="test">
+        <!--<embed id="img" pluginspage="http://www.adobe.com/svg/viewer/install/"   height="573" width="738.46"  type="image/svg+xml"/>-->
+        <!--<map></map>
+        <div class="showTitle" style="display: none">
+        </div>-->
+      </div>
+
+    </div>
+    <div class="nav-list" id="compoundlist">
+      <div class="ulist"></div>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+<div style="clear:both"></div>
+  <div style="height: 60px"></div>
+<!-- 定义主体结束 -->
+  
+  <!-- Footer Start -->
+<footer class="sigma_footer sigma_footer-dark">
+
+  <!-- Middle Footer -->
+  <div class="sigma_footer-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 footer-widget">
+          <img src="./static/assets/img/SMART_logo2.svg" class="mb-4" alt="logo">
+          <p>The Ma Laboratory School of Life Sciences, Northwest A&F University, Yangling, Shaanxi, 712100, China</p>
+         <!-- <p>Room No.2216, State Key Laboratory of Crop Stress Biology for Arid Areas</p>-->
+          <ul class="sigma_sm">
+            <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a> </li>
+            <li> <a href="#"> <i class="fab fa-instagram"></i> </a> </li>
+            <li> <a href="#"> <i class="fab fa-twitter"></i> </a> </li>
+            <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a> </li>
+          </ul>
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-4 col-sm-12 footer-widget">
+          <h5 class="widget-title">Information</h5>
+          <ul>
+            <li> <a href="index">Home</a> </li>
+            <li> <a href="greeting">Contribute</a> </li>
+            <li> <a href="./static/download/SMILES.zip">2D structure files</a> </li>
+            <li> <a href="./static/download/mol2.zip">3D structure files</a> </li>
+            <li> <a href="help">Help</a> </li>
+            <li> <a href="citingus">Contact</a> </li>
+
+          </ul>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 d-none d-lg-block footer-widget">
+          <h5 class="widget-title">About Us</h5>
+          <ul>
+            <li> <a href="https://bioinfo.nwafu.edu.cn/" target="_blank">MaLab</a> </li>
+            <li> <a href="https://scholar.google.com/citations?user=UaWkSkIAAAAJ&hl=en" target="_blank">Google Scholar</a> </li>
+            <li> <a href="https://github.com/cma2015" target="_blank">Github </a></li>
+            <li> <a href="mailto:chuangma2006@gmail.com">Gmail</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="sigma_footer-bottom">
+    <div class="container">
+      <div class="sigma_footer-copyright">
+        <p> Copyright © 2020. All Rights Reserved. </p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- Footer End -->
+
+  <script>
+    let data2;
+    let pathwayId = window.location.href.split("id=")[1]
+    if(pathwayId != undefined){
+      pathwayId = Number(pathwayId.substring(pathwayId.length-2,pathwayId.length)) - 1;
+    }  else pathwayId = 0;
+    $(document).ready(function(){
+
+      $("#searchPathway").focus(function(){
+        $("#searchPathway").val("");
+        var data = $("#searchList").find("li");
+        
+        $(data).length;
+        $("#searchList").css("height",length*30+"px").css("border","1px solid #CCC");
+          $("#searchList").on("click", "li", function(){
+              $("#searchPathway").val($(this).text());
+              $("#searchList").css("height","0px").css("border","0px");
+          });
+        });
+
+        $("#searchPathway").blur(function(){
+          $("#searchList").css("height","0px").css("border","0px");
+
+        // })
+          });
+
+      $.ajax({
+        url: "http://39.101.176.205:4010/SMART/showAllPathways?callback=?",
+        type: "get",
+        async: true,
+        dataType:"jsonp",  //数据格式设置为jsonp
+        contentType: 'application/json',
+        jsonp:"callback",
+        success: function(data){
+          data2 = data;
+          //data2 = JSON.stringify(data);
+          if(data.length>0)
+          {
+            var html = [];
+            for(var i = 0;i < data.length;i++)
+              {
+                html.push('<option value="'+data[i].pic.desc+'">'+data[i].pathwayName+'</option>');
+              }
+            $("#searchList").append(html.join(''));
+          }
+          //获取发生了此事件的name
+          var name;
+
+
+          $("#searchPathway").change(function(data){
+            name = $(this).val();
+          });
+
+          //当点击go时相应的操作
+          //func(data,pathwayId);
+          $("#test").empty();
+          $("#test").append("<embed id='img'/>")
+          $("#img").attr("src",data[pathwayId].pic.url);
+          $("#img").attr("usemap","#"+data[pathwayId].pic.desc);
+          $("#img").attr("pluginspage","http://www.adobe.com/svg/viewer/install/");
+          $("#img").attr("height","573");
+          $("#img").attr("width","738.46");
+          /*$("#img").attr("height","530");
+          $("#img").attr("width","683.04");*/
+          $("#img").attr("type","image/svg+xml");
+          $("#pathwayName").text(data[pathwayId].pathwayName);
+          $(".nav-list").children('.ulist').empty().html();
+          var ulist ='<ul class="nav_left">';
+          for(i = 0; i < data[pathwayId].pictures.length;i++){
+            if(data[pathwayId].pictures[i].type == "I")
+              ulist += "<li class='i_li'><a style='color:#c43843;' href='javascript:void(0);' onclick='smg_click2("+'"'+data[pathwayId].pictures[i].groupName+'"'+")'>"+data[pathwayId].pictures[i].groupName+"</a></li>";
+            else if (data[pathwayId].pictures[i].type == "Ig")
+              ulist += "<li class='ig_li'><a style='color:#c43843;' href='javascript:void(0);' onclick='smg_click2("+'"'+data[pathwayId].pictures[i].groupName+'"'+")'>"+data[pathwayId].pictures[i].groupName+"</a></li>";
+            else if (data[pathwayId].pictures[i].type == "A")
+              ulist += "<li class='a_li'><a style='color:#38c459;' href='javascript:void(0);' onclick='smg_click2("+'"'+data[pathwayId].pictures[i].groupName+'"'+")'>"+data[pathwayId].pictures[i].groupName+"</a></li>";
+            else
+              ulist += "<li class='ag_li'><a style='color:#38c459;' href='javascript:void(0);' onclick='smg_click2("+'"'+data[pathwayId].pictures[i].groupName+'"'+")'>"+data[pathwayId].pictures[i].groupName+"</a></li>";
+          }
+          ulist += '</ul>';
+          $(".nav-list").children('.ulist').html(ulist);
+          $("#submitPathway").click(function(){
+            // var that = this;
+            $("#test").empty();
+            for(var i = 0;i<data.length;i++)
+            {
+              //seletced相应的图片发生改变
+
+              if(name==data[i].pic.desc)
+              {
+                // $("#img").attr("src","./assets/img/PNG"+data[i].pic.url.split("http://localhost:8080")[1]);
+                //func(data,i);
+                //<embed id="img" pluginspage="http://www.adobe.com/svg/viewer/install/" src="./static/assets/img/PP001_CellWall_pure.svg"  height="573" width="738.46"  type="image/svg+xml"/>
+                $("#test").append("<embed id='img'/>")
+                $("#img").attr("src",data[i].pic.url);
+                $("#img").attr("usemap","#"+data[i].pic.desc);
+                $("#img").attr("pluginspage","http://www.adobe.com/svg/viewer/install/");
+                $("#img").attr("height","573");
+                $("#img").attr("width","738.46");
+                $("#img").attr("type","image/svg+xml");
+                $("#pathwayName").text(data[i].pathwayName);
+
+                pathwayId = i;
+                var ulist ='<ul class="nav_left">';
+                var j = 0;
+                for(j = 0; j < data[i].pictures.length;j++){
+                  if(data[i].pictures[j].type == "I")
+                    ulist += "<li class='i_li'><a style='color:#c43843;' href='javascript:void(0);' onclick='smg_click2("+'"'+data[i].pictures[j].groupName+'"'+")'>"+data[i].pictures[j].groupName+"</a></li>";
+                  else if (data[i].pictures[j].type == "Ig")
+                    ulist += "<li class='ig_li'><a style='color:#c43843;' href='javascript:void(0);' onclick='smg_click2("+'"'+data[i].pictures[j].groupName+'"'+")'>"+data[i].pictures[j].groupName+"</a></li>";
+                  else if (data[i].pictures[j].type == "A")
+                    ulist += "<li class='a_li'><a style='color:#38c459;' href='javascript:void(0);' onclick='smg_click2("+'"'+data[i].pictures[j].groupName+'"'+")'>"+data[i].pictures[j].groupName+"</a></li>";
+                  else
+                    ulist += "<li class='ag_li'><a style='color:#38c459;' href='javascript:void(0);' onclick='smg_click2("+'"'+data[i].pictures[j].groupName+'"'+")'>"+data[i].pictures[j].groupName+"</a></li>";
+                }
+                ulist += '</ul>';
+                $(".nav-list").children('.ulist').html(ulist);
+              }
+            }
+          })
+
+        },
+        error: function(err,data){
+          alert("Please reload the page!");
+          console.log(err);
+          console.log(data);
+        }
+      });
+    })
+
+    function smg_click2(id){
+      /*Dialog({
+       title: id,
+       content: a,
+       contentBgColor: "#f5f5f5",
+       width:400,
+      });*/
+      var i;
+      var molecularPISMID;
+      for(i = 0; i < data2[pathwayId].pictures.length;i++){
+        if (id == data2[pathwayId].pictures[i].groupName){
+          molecularPISMID = data2[pathwayId].pictures[i].molecularPISMID;
+          break;
+        }
+      }
+      var str = molecularPISMID.split("%%");
+      var a = "<div>";
+      for (var j = 0 ; j < str.length ; j++){
+        a+='<a href="cdetail?id='+str[j]+'">'+str[j]+'</a>&nbsp;&nbsp;';
+        if((j+1) % 3 == 0)
+          a += '<br/>';
+      }
+      a+="</div>";
+      var title = id + " contain " + str.length + " items";
+      var option = {
+        title: title,
+        btn: parseInt("0001",2),
+        onOk: function(){
+          console.log("确认啦");
+        }
+      }
+      window.wxc.xcConfirm(a, "custom", option);
+    }
+  </script>
+</body>
+
+</html>

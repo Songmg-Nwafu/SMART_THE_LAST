@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMART</title>
+  <!-- Vendor Stylesheets -->
+  <!--<link href="./static/assets/css/reset.css" rel="stylesheet" type="text/css">-->
+  <link rel="stylesheet" href="./static/assets/css2/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/assets/css2/plugins/animate.min.css">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="./static/assets/fonts/flaticon/flaticon.css">
+  <link rel="stylesheet" href="./static/assets/css2/plugins/font-awesome.min.css">
+  <!-- Tilakam Style sheet -->
+  <link rel="stylesheet" href="./static/assets/css2/style.css">
+  <link rel="stylesheet" href="./static/assets/css2/responsive.css">
+  <!-- MyStyle -->
+  <!--<link rel="stylesheet" href="./static/assets/css2/mystyle.css">-->
+  <link rel="stylesheet" href="./static/assets/css2/mystyle.css">
+</head>
+
+<body>
+
+
+
+<!-- Header Start -->
+<header class="sigma_header header-1 can-sticky header-absolute header-light">
+
+  <!-- Middle Header Start -->
+  <div class="sigma_header-middle">
+    <div class="container">
+      <nav class="navbar">
+
+        <!-- Logo Start -->
+        <div class="sigma_logo-wrapper">
+          <a class="navbar-brand" href="index">
+            <img src="./static/assets/img/SMART_logo2.svg" alt="logo">
+          </a>
+        </div>
+        <!-- Logo End -->
+
+        <ul class="navbar-nav">
+          <li class="menu-item">
+            <a href="index">Home</a>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Browse</a>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="Browse_C">Molecule</a>
+              </li>
+              <li class="menu-item">
+                <a href="Browse_P">Pathway</a>
+              </li>
+              <li class="menu-item">
+                <a href="Browse_T">Target</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Search</a>
+            <ul class="sub-menu">
+              <li class="menu-item"> <a href="Search_text">Text</a> </li>
+              <li class="menu-item"> <a href="Search_Structure">Structure</a> </li>
+              <li class="menu-item"> <a href="Search_sequence">Sequence</a> </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Download</a>
+            <ul class="sub-menu">
+              <li class="menu-item"> <a href="./static/download/SMILES.zip">2D structure files</a> </li>
+              <li class="menu-item"> <a href="./static/download/mol2.zip">3D structure files</a> </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="greeting">Contribute</a>
+          </li>
+          <li class="menu-item">
+            <a href="help">Help</a>
+          </li>
+          <li class="menu-item">
+            <a href="citingus">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- Middle Header End -->
+
+</header>
+<!-- Header End -->
+
+
+  <!-- Banner Start -->
+  <div class="sigma_banner banner-3" style="height: 105px;background-image: url('./static/assets/img/head-stat.png');">
+  </div>
+  
+  <!-- 定义主体开始 -->
+ <div id="u132" class="container reference_content">
+            <div class="citing_title">
+                Help
+            </div>
+            <div id="u132_text" class="citing_body" style="height:auto">
+
+<h2 style="font-family: Helvetica, Arial, sans-serif"> Introduction</h2>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;SMART is a database for small molecules with functional implications in plants. In the current version, the SMART database provides 1218 small molecules with experimentally realized function information in plants. These 1218 small molecules are involved in 10 biological pathways and associated with 186 proteins, 108 of these 1218 small molecules are experimentally confirmed to target 24 proteins, exhibiting agonizing, antagonizing or inhibiting activity. </p>
+
+
+<center><img src="./static/assets/img/picture/smart_web1.png"/></center>
+
+<center>Fig.1 SMART Home Page</center>
+
+
+
+<h2 style="font-family: Helvetica, Arial, sans-serif"> Browse</h2>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;SMART provides three ways(Molecule, Pathway and Target) to browse the SMART database. On the <b>Browse Molecule</b> page, the information of the four aspects of the molecule is displayed, including Basic Information, Pathway, Related Compounds and Supporting information. In the current version of SMART, related molecules were defined as active molecules tested in a single literature or molecules targeting on the same protein targets.You can switch between each other by clicking the title on the information card, and click elsewhere on the card can browse the molecular detailed information page. The <b>Browse Pathway</b> page shows different plant signal pathways, click on the molecular icons can enter the corresponding page. The <b>Browse Target</b> page is presented as a table of protein information.</p>
+              <h4 style="font-family: Helvetica, Arial, sans-serif"> Browse-Molecule</h4>
+                <center><img src="./static/help_img/SMART Browse Molecular Page2.png"/></center>
+                <center>Fig.2 Browse-Molecule Page</center>
+
+                <center><img src="./static/help_img/Browse Molecular Detail_5.png"/></center>
+                <center><img src="./static/help_img/Browse Molecular Detail_6.png"/></center>
+                <center>Fig.3 Browse-Molecule Detail Page 2</center>
+              <h3 style="font-family: Helvetica, Arial, sans-serif"> Browse-Pathway</h3>
+                <center><img src="./static/help_img/Browse Pathway.png"/></center>
+                <center>Fig.4 Browse-Pathway Page</center>
+              <h3 style="font-family: Helvetica, Arial, sans-serif"> Browse-Target</h3>
+                <center><img src="./static/help_img/Browse Target2.png"/></center>
+                <center>Fig.5 Browse-Target Page</center>
+
+<h2 style="font-family: Helvetica, Arial, sans-serif"> Search</h2>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;SMART can be retrieved through in text-based keyword search, in structure-based similarity search or in sequence-based similarity search. For <b>text search</b>, moleculars match the keywords will be showed. For <b>structure search</b>, molecules with same or similar structure with input structure will be present. For <b>sequence search</b>, proteins with similar sequence with input will be present.Such database searchers enable users to more deeply understand small molecules/proteins/biological processes/phyenotypes of interested. </p>
+              <h4 style="font-family: Helvetica, Arial, sans-serif"> Search-Text</h4>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;SMRAT supports the search for a keyword to get small molecules like the IUPAC and common name, chemical formula,phenotype information and so on. And the search can also be preformed based on target proteins (if users interested) with some keywords like protein name, uniport ID, PDB ID.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Input:</b>Molecular name, chemical formula, phenotype keywords, etc.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Output:</b>Molecular information</p>
+              <center><img src="./static/help_img/Search Text.png"/></center>
+                <center>Fig.6 Search-Text Page</center>
+
+                <center><img src="./static/help_img/Search text result.png"/></center>
+                <center>Fig.7 Search-Text Result Page</center>
+              <h4 style="font-family: Helvetica, Arial, sans-serif"> Search-Structure</h4>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;SMART supports the search for 2D and 3D structures to get similar small molecules.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Input:</b>1)Drawing the molecular structure in the JSME molecular editor.&nbsp;2)Enter the SMILES format string. &nbsp;3)Directly upload the molecular structure in mol2 or SMILE format,.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Output:</b>Similar molecular information</p>
+              <center><img src="./static/help_img/Search structure.png"/></center>
+                <center>Fig.8 Search-Structure Page</center>
+
+                <center><img src="./static/help_img/Search structure result.png"/></center>
+                <center>Fig.9 Search-Structure Result Page</center>
+
+              <h4 style="font-family: Helvetica, Arial, sans-serif"> Search-Sequence</h4>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;SMART supports the search for protein sequences.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Input:</b>1)Enter the protein sequence on the page. &nbsp;2)Protein sequences in FASTA format.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Output:</b>The results comparing with protein sequences in the database by blastp.</p>
+                <center><img src="./static/help_img/Search sequence.png"/></center>
+                <center>Fig.10 Search-Sequence Page</center>
+
+                <center><img src="./static/help_img/Search sequence result.png"/></center>
+                <center>Fig.11 Search-Sequence Result Page</center>
+
+              <h2 style="font-family: Helvetica, Arial, sans-serif"> Contribute</h2>
+              <p>&nbsp;&nbsp;&nbsp;We welcome the curation from users for any error of supplement, it can be achieved by "Correction -> Edit" at each entry webpages shown in figure below.</p>
+              <center><img src="./static/help_img/Edit.png"/></center>
+              <p>&nbsp;&nbsp;&nbsp;By clicking "Edit", the page will go to a page in which all the information can be edited as following.</p>
+              <center><img src="./static/help_img/Correction.png"/></center>
+                <center>Fig.12 Correction Page</center>
+              <p>&nbsp;&nbsp;&nbsp;Users are also encouraged to upload their newly discovered new small molecules to the SMART database by filling the respective tables with molecular name, molecular structure, target and function informatrion.</p>
+                <center><img src="./static/help_img/Contribute.png"/></center>
+                <center>Fig.13 Contribute Page</center>
+
+</div>
+          </div>
+    
+          <!-- Unnamed (矩形) -->
+    <!-- 定义内容结束 -->
+<!-- 定义主体结束 -->
+<div style="height: 30px"></div>
+<footer class="sigma_footer sigma_footer-dark">
+
+  <!-- Middle Footer -->
+  <div class="sigma_footer-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 footer-widget">
+          <img src="./static/assets/img/SMART_logo2.svg" class="mb-4" alt="logo">
+          <p>The Ma Laboratory School of Life Sciences, Northwest A&F University, Yangling, Shaanxi, 712100, China</p>
+          <!--<p>Room No.2216, State Key Laboratory of Crop Stress Biology for Arid Areas</p>-->
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-4 col-sm-12 footer-widget">
+          <h5 class="widget-title">Information</h5>
+          <ul>
+            <li> <a href="index">Home</a> </li>
+            <li> <a href="greeting">Contribute</a> </li>
+            <li> <a href="./static/download/SMILES.zip">2D structure files</a> </li>
+            <li> <a href="./static/download/mol2.zip">3D structure files</a> </li>
+            <li> <a href="help">Help</a> </li>
+            <li> <a href="citingus">Contact</a> </li>
+
+          </ul>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 d-none d-lg-block footer-widget">
+          <h5 class="widget-title">About Us</h5>
+          <ul>
+            <li> <a href="https://bioinfo.nwafu.edu.cn/" target="_blank">MaLab</a> </li>
+            <li> <a href="https://scholar.google.com/citations?user=UaWkSkIAAAAJ&hl=en" target="_blank">Google Scholar</a> </li>
+            <li> <a href="https://github.com/cma2015" target="_blank">Github </a></li>
+            <li> <a href="mailto:chuangma2006@gmail.com">Gmail</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="sigma_footer-bottom">
+    <div class="container">
+      <div class="sigma_footer-copyright">
+        <p> Copyright © 2020. All Rights Reserved. </p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- Footer End -->
+  <!-- Vendor Scripts -->
+  <script src="./static/assets/js2/plugins/jquery-3.4.1.min.js"></script>
+  <script src="./static/assets/js2/plugins/popper.min.js"></script>
+  <script src="./static/assets/js2/plugins/bootstrap.min.js"></script>
+  <script src="./static/assets/js2/plugins/imagesloaded.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.magnific-popup.min.js"></script>
+
+
+  <script src="./static/assets/js2/plugins/jquery.countdown.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.waypoints.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.counterup.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.zoom.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.inview.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.event.move.js"></script>
+
+  <script src="./static/assets/js2/plugins/wow.min.js"></script>
+  <script src="./static/assets/js2/plugins/isotope.pkgd.min.js"></script>
+  <script src="./static/assets/js2/plugins/slick.min.js"></script>
+  <script src="./static/assets/js2/plugins/ion.rangeSlider.min.js"></script>
+
+  <!-- Tilakam Scripts -->
+  <script src="./static/assets/js2/main.js"></script>
+  
+</body>
+
+</html>

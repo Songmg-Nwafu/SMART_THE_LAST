@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMART</title>
+  <!-- Vendor Stylesheets -->
+  <!--<link href="./static/assets/css/reset.css" rel="stylesheet" type="text/css">-->
+  <link rel="stylesheet" href="./static/assets/css2/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/assets/css2/plugins/animate.min.css">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="./static/assets/fonts/flaticon/flaticon.css">
+  <link rel="stylesheet" href="./static/assets/css2/plugins/font-awesome.min.css">
+  <!-- Tilakam Style sheet -->
+  <link rel="stylesheet" href="./static/assets/css2/style.css">
+  <link rel="stylesheet" href="./static/assets/css2/responsive.css">
+  <!-- MyStyle -->
+  <!--<link rel="stylesheet" href="./static/assets/css2/mystyle.css">-->
+  <link rel="stylesheet" href="./static/assets/css2/mystyle.css">
+  <link rel="stylesheet" href="./static/assets/css2/layui.css">
+</head>
+
+<body>
+
+
+
+<!-- Header Start -->
+<header class="sigma_header header-1 can-sticky header-absolute header-light">
+
+  <!-- Middle Header Start -->
+  <div class="sigma_header-middle">
+    <div class="container">
+      <nav class="navbar">
+
+        <!-- Logo Start -->
+        <div class="sigma_logo-wrapper">
+          <a class="navbar-brand" href="index">
+            <img src="./static/assets/img/SMART_logo2.svg" alt="logo">
+          </a>
+        </div>
+        <!-- Logo End -->
+
+        <ul class="navbar-nav">
+          <li class="menu-item">
+            <a href="index">Home</a>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Browse</a>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="Browse_C">Molecule</a>
+              </li>
+              <li class="menu-item">
+                <a href="Browse_P">Pathway</a>
+              </li>
+              <li class="menu-item">
+                <a href="Browse_T">Target</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Search</a>
+            <ul class="sub-menu">
+              <li class="menu-item"> <a href="Search_text">Text</a> </li>
+              <li class="menu-item"> <a href="Search_Structure">Structure</a> </li>
+              <li class="menu-item"> <a href="Search_sequence">Sequence</a> </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Download</a>
+            <ul class="sub-menu">
+              <li class="menu-item"> <a href="./static/download/SMILES.zip">2D structure files</a> </li>
+              <li class="menu-item"> <a href="./static/download/mol2.zip">3D structure files</a> </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="greeting">Contribute</a>
+          </li>
+          <li class="menu-item">
+            <a href="help">Help</a>
+          </li>
+          <li class="menu-item">
+            <a href="citingus">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- Middle Header End -->
+
+</header>
+<!-- Header End -->
+
+
+  <!-- Banner Start -->
+  <div class="sigma_banner banner-3" style="height: 105px;background-image: url('./static/assets/img/head-stat.png');">
+  </div>
+  
+<div class="sequenceSearch">
+  <!--<div class="search">
+  &lt;!&ndash; <img src="./assets/img/search.png" alt=""> &ndash;&gt;
+  <form action="/SMART/Search_sequence_result">
+    <input type="text" name="sequence_str">
+    <input type="submit" value=" " id="search">
+  </form>
+</div>-->
+</div>
+<div class="page">
+  <div class="download" id="downloadinfo"></div>
+  <table class="layui-hide" id="test"></table>
+</div>
+<div style="height: 30px"></div>
+<footer class="sigma_footer sigma_footer-dark">
+
+  <!-- Middle Footer -->
+  <div class="sigma_footer-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 footer-widget">
+          <img src="./static/assets/img/SMART_logo2.svg" class="mb-4" alt="logo">
+          <p>The Ma Laboratory School of Life Sciences, Northwest A&F University, Yangling, Shaanxi, 712100, China</p>
+          <!--<p>Room No.2216, State Key Laboratory of Crop Stress Biology for Arid Areas</p>-->
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-4 col-sm-12 footer-widget">
+          <h5 class="widget-title">Information</h5>
+          <ul>
+            <li> <a href="index">Home</a> </li>
+            <li> <a href="greeting">Contribute</a> </li>
+            <li> <a href="./static/download/SMILES.zip">2D structure files</a> </li>
+            <li> <a href="./static/download/mol2.zip">3D structure files</a> </li>
+            <li> <a href="help">Help</a> </li>
+            <li> <a href="citingus">Contact</a> </li>
+
+          </ul>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 d-none d-lg-block footer-widget">
+          <h5 class="widget-title">About Us</h5>
+          <ul>
+            <li> <a href="https://bioinfo.nwafu.edu.cn/" target="_blank">MaLab</a> </li>
+            <li> <a href="https://scholar.google.com/citations?user=UaWkSkIAAAAJ&hl=en" target="_blank">Google Scholar</a> </li>
+            <li> <a href="https://github.com/cma2015" target="_blank">Github </a></li>
+            <li> <a href="mailto:chuangma2006@gmail.com">Gmail</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="sigma_footer-bottom">
+    <div class="container">
+      <div class="sigma_footer-copyright">
+        <p> Copyright © 2020. All Rights Reserved. </p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- Footer End -->
+  <!-- Vendor Scripts -->
+  <script src="./static/assets/js2/plugins/jquery-3.4.1.min.js"></script>
+  <script src="./static/assets/js2/plugins/popper.min.js"></script>
+  <script src="./static/assets/js2/plugins/bootstrap.min.js"></script>
+  <script src="./static/assets/js2/plugins/imagesloaded.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.magnific-popup.min.js"></script>
+
+
+  <script src="./static/assets/js2/plugins/jquery.countdown.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.waypoints.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.counterup.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.zoom.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.inview.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.event.move.js"></script>
+
+  <script src="./static/assets/js2/plugins/wow.min.js"></script>
+  <script src="./static/assets/js2/plugins/isotope.pkgd.min.js"></script>
+  <script src="./static/assets/js2/plugins/slick.min.js"></script>
+  <script src="./static/assets/js2/plugins/ion.rangeSlider.min.js"></script>
+
+  <!-- Tilakam Scripts -->
+  <script src="./static/assets/js2/main.js"></script>
+
+  <script src="./static/assets/js2/sequence.js"></script>
+
+<script src="./static/assets/js2/layui.all.js"></script>
+<script src="./static/assets/js2/laypage.js"></script>
+
+  <script>
+  /*$(document).ready(function(){
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]); return null;
+    }
+    let sequence_result = window.atob(getQueryString('sequence_result'))
+        console.log("sequence_result:::"+sequence_result);
+    var data = JSON.parse(sequence_result);
+
+    console.log("ssr:::"+data);
+    if(data==null||data.length<=0){
+
+      $(".page").html("The query result is empty!~").css({
+        "text-align":"center",
+        "font-size":"32px",
+        "color":"#b0b0b0",
+        "font-family":'Arial","Microsoft YaHei","黑体","宋体",sans-serif"',
+        "margin-top":"100px",
+        "margin-bottom":"80px"
+      });
+
+    }else{
+      var obj_1={
+          obj_box:'.page',//翻页容器
+        };
+        
+        page_ctrl2(obj_1,data);
+    
+    
+    }
+    console.log(data[0]);
+  });*/
+  $(document).ready(function(){
+
+    function getQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return decodeURI(r[2]); return null;
+    }
+    function initPage(total,length){
+      layui.use('table', function(){
+        var table = layui.table;
+        table.render({
+          elem: '#test'
+          ,page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+            limits: [10, 20, 30, 40, 50]
+            ,layout: ['count', 'prev', 'page', 'next', 'limit', 'skip'] //自定义分页布局
+            ,prev: "<<"
+            ,next: ">>"
+            ,theme: "#0b88dc"
+            ,curr: 1
+            ,limit: 10
+            ,count: length
+          }
+          ,data: total
+          ,even: true
+          ,cols: [
+            [
+              {field:'targetID', title: 'Target ID', width:'10%',sort: true,rowspan:2}
+              ,{field:'proteinName', title: 'Protein Name',width:'17%',rowspan: 2}
+              ,{align: 'center', title: 'Blastp Information',width:'25%', colspan: 4}
+              ,{align: 'center', title: 'Basic Information',width:'48%', colspan: 4}
+            ],[
+              {field:'bitscore', title: 'Bitcore',sort: true}
+              ,{field: 'evalue', title: 'Evalue',sort: true}
+              ,{field: 'qcovs', title: "Qcovs",sort: true}
+              ,{field: 'ident', title: "Ident",sort: true}
+              ,{field:'uniprotID',  title: 'Uniprot ID',templet: function (res) {
+                if (res.uniprotID != undefined){
+                  var strs = new Array();
+                  strs = res.uniprotID.split("%%");
+                  var string = "";
+                  var i;
+                  for (i=0;i<strs.length;i++){
+                    var a = '<a href="https://www.uniprot.org/uniprot/'+strs[i]+'" target="_blank">'+strs[i]+'</a>';
+                    string = string + a + '&nbsp;&nbsp;&nbsp;&nbsp;';
+                    if(i%4==0 && i != 0)
+                      string = string + '<br>';
+                  }
+                  return string;
+                }
+                else  return "";
+              }
+            }
+              ,{field:'sequencel',  title: 'Sequence',templet: function (res) {
+                if (res.sequencel != undefined){
+                  var strs = new Array();
+                  strs = res.sequencel.split("%%");
+                  var string = "";
+                  var i;
+                  for (i=0;i<strs.length;i++){
+                    var a = '<a href="./static/fasta/'+strs[i]+'">'+strs[i]+'</a>';
+                    string = string + a+ '&nbsp;&nbsp;&nbsp;&nbsp;';
+                    if((i+1)%4==0 && i != 0)
+                      string = string + '<br>';
+                  }
+                  return string;
+                  return string;
+                }
+                else  return "";
+              }
+            }
+              ,{field:'pdbid', title: 'PDB ID',templet: function(res){
+                if (res.pdbid != undefined){
+                  var strs = new Array();
+                  strs = res.pdbid.split("%%");
+                  var string = "";
+                  var i;
+                  for (i=0;i<strs.length;i++){
+                    var a = '<a href="http://www.rcsb.org/structure/'+strs[i]+'" target="_blank">'+strs[i]+'</a>';
+                    string = string + a + '&nbsp;&nbsp;&nbsp;&nbsp;';
+                    if(i%4==0 && i != 0)
+                      string = string + '<br>';
+                  }
+                  return string;
+                }
+                else  return "";
+              }
+            }
+              ,{field:'relateCommpounds', title: 'Molecule',templet: function(res){
+                if (res.relateCommpounds != undefined){
+                  var strs = new Array();
+                  strs = res.relateCommpounds.split("%%");
+                  var string = "";
+                  var i;
+
+                  for (i=0;i<strs.length;i++){
+                    var a = '<a href="cdetail?id='+strs[i]+'">'+strs[i]+'</a>';
+                    string = string + a+ '&nbsp;&nbsp;&nbsp;&nbsp;';
+                    if((i+1)%4==0 && i != 0)
+                      string = string + '<br>';
+                  }
+                  return string;
+                }
+                else return "";
+              }
+            }
+            ]
+          ]
+
+        });
+      });
+    }
+    let sequence_result = window.atob(getQueryString('sequence_result'))
+    console.log("sequence_result:::"+sequence_result);
+    var data = JSON.parse(sequence_result);
+
+    console.log("ssr:::"+data);
+    if(data==null||data.length<=0){
+
+      $(".page").html("The query result is empty!~").css({
+        "text-align":"center",
+        "font-size":"32px",
+        "color":"#b0b0b0",
+        "font-family":'Arial","Microsoft YaHei","黑体","宋体",sans-serif"',
+        "margin-top":"100px",
+        "margin-bottom":"80px"
+      });
+
+    }else{
+      var downloadinfo = '<p>You can download the <a href="./static/tmpfile/'+data[0].filepath+'">detail</a></p>';
+      $("#downloadinfo").html(downloadinfo);
+      initPage(data,data.length);
+    }
+    console.log(data[0]);
+  });
+</script>
+  
+</body>
+
+</html>

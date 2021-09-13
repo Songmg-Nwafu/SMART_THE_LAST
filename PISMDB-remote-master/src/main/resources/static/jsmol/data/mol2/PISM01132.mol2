@@ -1,0 +1,67 @@
+#	Name:			PISM01132
+#	Creating user name:	14062
+#	Creation time:		Sat Apr 06 23:27:08 2019
+
+#	Modifying user name:	14062
+#	Modification time:	Sat Apr 06 23:28:21 2019
+
+@<TRIPOS>MOLECULE
+PISM01132
+   21    23     2     1     0
+SMALL
+GAST_HUCK
+
+
+@<TRIPOS>ATOM
+      1 H1        -12.9554    8.7586   -0.9679 H         1 BENZYL      0.0841 
+      2 H2        -13.9198    8.1640   -3.1866 H         1 BENZYL      0.1072 
+      3 C2        -12.3034    8.5338   -1.8065 C.ar      1 BENZYL      0.0020 
+      4 C3        -12.8418    8.1998   -3.0531 C.ar      1 BENZYL     -0.0066 
+      5 C4        -11.9936    7.9117   -4.1280 C.ar      1 BENZYL     -0.0059 
+      6 C5        -10.6043    7.9550   -3.9663 C.ar      1 BENZYL      0.0092 
+      7 C6        -10.0663    8.2895   -2.7182 C.ar      1 BENZYL      0.0803 
+      8 C7        -10.9159    8.5762   -1.6483 C.ar      1 BENZYL      0.0729 
+      9 I9        -10.0532    9.0583    0.1506 I         2 BENZYL     -0.0381 
+     10 C2         -8.4081    8.7406   -1.0350 C.ar      2 BENZYL      0.0729 
+     11 C3         -8.6284    8.3837   -2.3665 C.ar      2 BENZYL      0.0803 
+     12 C4         -7.5403    8.1558   -3.2170 C.ar      2 BENZYL      0.0092 
+     13 C5         -6.2387    8.2889   -2.7205 C.ar      2 BENZYL     -0.0059 
+     14 C6         -6.0222    8.6467   -1.3853 C.ar      2 BENZYL     -0.0066 
+     15 C7         -7.1099    8.8742   -0.5364 C.ar      2 BENZYL      0.0020 
+     16 H3        -12.4176    7.6527   -5.0944 H         1 BENZYL      0.0799 
+     17 H4         -9.9662    7.7282   -4.8126 H         1 BENZYL      0.0962 
+     18 H5         -7.6845    7.8778   -4.2546 H         2 BENZYL      0.0962 
+     19 H6         -5.3896    8.1133   -3.3757 H         2 BENZYL      0.0799 
+     20 H7         -5.0083    8.7480   -1.0073 H         2 BENZYL      0.1072 
+     21 H8         -6.9496    9.1522    0.5009 H         2 BENZYL      0.0841 
+@<TRIPOS>BOND
+     1   11    7 1    
+     2    3    4 ar   
+     3    3    8 ar   
+     4    8    7 ar   
+     5    7    6 ar   
+     6    6    5 ar   
+     7    5    4 ar   
+     8    3    1 1    
+     9    9   10 1    
+    10   10   11 ar   
+    11   10   15 ar   
+    12   15   14 ar   
+    13   14   13 ar   
+    14   13   12 ar   
+    15   12   11 ar   
+    16    8    9 1    
+    17    4    2 1    
+    18    5   16 1    
+    19    6   17 1    
+    20   12   18 1    
+    21   13   19 1    
+    22   14   20 1    
+    23   15   21 1    
+@<TRIPOS>SUBSTRUCTURE
+     1 BENZYL      3 PERM              0 ****  ****    2 ROOT 
+     2 BENZYL      9 PERM              0 ****  ****    2  
+@<TRIPOS>NORMAL
+@<TRIPOS>FF_PBC
+FORCE_FIELD_SETUP_FEATURE Force Field Setup information
+v1.0  0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 NONE 0 0 0 0 1 0 0 0 0 0 0 0 0

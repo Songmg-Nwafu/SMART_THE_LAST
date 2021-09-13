@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pathway</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- Fonts-->
+		<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+		<!-- 引入fonts -->
+		<link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+		<!-- Vendors-->
+		<link rel="stylesheet" type="text/css" href="./assets/vendors/bootstrap/bootstrap.min.css">
+		<!-- css -->
+		<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+		<!-- 引入js -->
+		<script src="./assets/vendors/_jquery/jquery-3.3.1.min.js"></script>
+		<script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- 定义头部 -->
+	<div class="head">
+		<div class="head-bg-img">
+			<img src="./assets/img/head-bg.png" alt="">
+		<div class="logo">
+			<img src="./assets/img/logo-shadow.png" alt="">
+		</div>
+		</div>
+		
+	<!-- 定义导航条 -->
+	<nav class="navbar navbar-default" role="navigation">
+	<ul class="nav navbar-nav">
+		<li><a href="/index">HOME</a></li>
+		<li class="dropdown dropdown-bg">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					BROWSE
+				</a>
+					<ul class="dropdown-menu">
+					<li><a href="./otherPage/browse-Compound.html">Commpound</a></li>
+					<li><a href="#">Pathway</a></li>
+					<li><a href="./Browse-Target.html">Target</a></li>
+				</ul>
+				
+			</li>
+		<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SEARCH</a>
+			<ul class="dropdown-menu">
+					<li><a href="./search-text.html">Text</a></li>
+					<li><a href="./Search-Structure.html">Structure</a></li>
+					<li><a href="#">Sequence</a></li>
+					
+			</ul>
+		</li>
+		<li><a href="./greeting">UPLOAD</a></li>
+		<li><a href="#">REFERENCES</a></li>
+		<li><a href="#">CITATION</a></li>
+		<li><a href="#">HELP</a></li>
+	</ul>
+		
+	</nav>
+	</div>
+<!-- 定义头部结束 -->
+<!-- 定义手风琴效果开始 -->
+	<div class="nav-list">
+		<h3>Description <span></span></h3>
+		<ul>
+			<li><a href="#">基本选择器</a></li>
+			<li><a href="#">层级选择器</a></li>
+			<li><a href="#">过滤选择器</a></li>
+		</ul>
+		
+		<h3>Compounds<span></span></h3>
+		<ul>
+			<li><a href="#">ABA agonist</a>
+					<ul>
+						<li>AM1/quinabaction</li>
+						<li>Pyrabactin</li>
+						<li>AMF</li>
+					</ul>
+			</li>
+			<li><a href="#">ABA catabolic inhibitors</a>
+					<ul>
+						<li>AM1/quinabaction</li>
+						<li>Pyrabactin</li>
+						<li>AMF</li>
+					</ul>
+			</li>
+		</ul>
+
+		<h3>Proteins <span></span></h3>
+		<ul>
+			<li><a href="#">CSS操作</a></li>
+			<li><a href="#">位置</a></li>
+			<li><a href="#">尺寸</a></li>
+		</ul>
+	</div>
+<!-- 定义手风琴效果结束 -->
+<!-- 定义右边效果开始 -->
+<div class="right-content">
+	<div class="name">ABA Singal Pathway</div>
+	<form action="#">
+		<input type="text" id="searchPathway" list="searchList" maxlength="20"  autocomplete="off">
+		<input type="submit" value="Go" id="submitPathway">
+		<datalist id="searchList" style="display:none;">
+		</datalist>
+	</form>
+	<div class="pathway-img">
+		<div class="img-box">
+		<img src="" alt="" id="img">
+		<map></map>
+		<div class="showTitle" style="display: none">
+		</div>
+		</div>
+		
+	</div>
+</div>
+	<script src="./assets/vendors/_jquery/jquery-3.3.1.min.js"></script>
+	<script src="./assets/js/usermap.js"></script>
+	<script>
+		$(document).ready(function(){
+			//绑定 单击事件
+			$(".nav-list h3").click(function(){
+				$(this)    //当前点击的 H3
+				.toggleClass("open")   //当前H3切换 open类
+				.siblings("h3")   
+				.removeClass("open") //其他 h3 删除 open类
+				.end()        // 返回 $(this)
+				.next("ul")  
+				.slideToggle()  //当前h3 后面的 ul 显示
+				.siblings("ul")   
+				.slideUp();   //其他 ul 隐藏
+			});
+			// console.log($(".nav-list ul li"));
+			$(".nav-list ul>li").click(function(){
+				$(this)
+				.chidren("ul")
+				.css("display","block");
+			});
+
+			$("#searchPathway").focus(function(){
+				var data = $("#searchList").find("li");
+				var length = 
+				$(data).length;
+				$("#searchList").css("height",length*30+"px").css("border","1px solid #CCC");
+			   	$("#searchList").on("click", "li", function(){
+        			$("#searchPathway").val($(this).text());
+        			$("#searchList").css("height","0px").css("border","0px");
+					});
+				});
+				$("#searchPathway").blur(function(){
+					$("#searchList").css("height","0px").css("border","0px");
+
+				// })
+			});
+			// console.log($(".searchList").find("li"))
+			// console.log($("#searchList").empty());
+
+			$.ajax({
+				url: "/show",
+				type: "get",
+				async: true,
+				dataType: "json",
+				success: function(data){
+				    console.log(data.length);
+					if(data.length>0)
+					{
+						var html = [];
+						for(var i = 0;i < data.length;i++)
+							{
+								html.push('<option value="'+data[i].pic.desc+'">'+data[i].pic.desc+'</option>');
+							}
+						$("#searchList").append(html.join(''));
+					}
+					//获取发生了此事件的name
+					var name;
+					$("#searchPathway").change(function(data){
+						name = $(this).val();
+					});
+
+					//当点击go时相应的操作
+					func(data,0);
+					$("#submitPathway").click(function(){
+					    // var that = this;
+ 						for(var i = 0;i<data.length;i++)
+ 						{
+ 							//seletced相应的图片发生改变
+
+ 							if(name==data[i].pic.desc)
+ 							{
+ 							$("#img").attr("src"," ");
+ 							func(data,i);
+ 							}
+ 						}
+					});
+
+				},
+				error: function(err){
+					alert("请求失败"+err);
+				}
+			});
+		})
+	</script>
+</body>
+<!-- 为每一张图片都设置锚点信息，默认显示第一张图片 -->
+</html>

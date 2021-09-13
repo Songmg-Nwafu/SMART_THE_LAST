@@ -1,0 +1,7 @@
+# BLASTP 2.4.0+
+# Query: 
+# Database: H:\bysj\PISMDB-remote-master\src\main\resources\blastpackage\blast-2.4.0+\bin\pismdb
+# Fields: bit score, evalue, % query coverage per subject, % identity, subject acc., subject title
+# 1 hits found
+14.3	9.4	89	31.250	Q07100	Serine/threonine-protein phosphatase PP2A-3 catalytic subunit OS=Arabidopsis thaliana OX=3702 GN=PP2A3 PE=1 SV=2
+# BLAST processed 1 queries

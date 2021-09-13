@@ -1,0 +1,22 @@
+# BLASTP 2.4.0+
+# Query: 
+# Database: D:\blast-2.4.0+\bin\pismdb
+# Fields: bit score, evalue, % query coverage per subject, % identity, subject acc., subject title
+# 16 hits found
+670	0.0	100	97.493	Q9LU77	Auxin efflux carrier component 2 OS=Arabidopsis thaliana OX=3702 GN=PIN2 PE=1 SV=2
+26.3	0.12	20	30.137	Q9LW29	Protein AUXIN SIGNALING F-BOX 2 OS=Arabidopsis thaliana OX=3702 GN=AFB2 PE=1 SV=1
+24.9	0.36	19	25.455	Q9LJX0	ABC transporter B family member 19 OS=Arabidopsis thaliana OX=3702 GN=ABCB19 PE=1 SV=1
+20.2	10.0	19	29.167	Q9LJX0	ABC transporter B family member 19 OS=Arabidopsis thaliana OX=3702 GN=ABCB19 PE=1 SV=1
+24.9	0.36	19	25.455	A0A178V9I8	PGP19 OS=Arabidopsis thaliana OX=3702 GN=AXX17_At3g31560 PE=4 SV=1
+20.2	9.8	19	29.167	A0A178V9I8	PGP19 OS=Arabidopsis thaliana OX=3702 GN=AXX17_At3g31560 PE=4 SV=1
+22.7	1.6	32	29.630	B1GV39	Cinnamate-4-hydroxylase OS=Arabidopsis thaliana OX=3702 GN=C4H PE=3 SV=1
+22.4	2.0	32	31.343	B1GV39	Cinnamate-4-hydroxylase OS=Arabidopsis thaliana OX=3702 GN=C4H PE=3 SV=1
+22.7	1.7	7	36.000	Q9ZWJ9	Two-component response regulator ARR2 OS=Arabidopsis thaliana OX=3702 GN=ARR2 PE=1 SV=1
+22.1	2.0	9	37.500	Q9SMQ6	Ras-related protein RABA4b OS=Arabidopsis thaliana OX=3702 GN=RABA4B PE=1 SV=1
+22.4	2.3	18	28.571	Q42510	ARF guanine-nucleotide exchange factor GNOM OS=Arabidopsis thaliana OX=3702 GN=GN PE=1 SV=1
+21.0	5.7	18	36.000	Q42510	ARF guanine-nucleotide exchange factor GNOM OS=Arabidopsis thaliana OX=3702 GN=GN PE=1 SV=1
+21.8	2.9	19	29.412	O04197	Coronatine-insensitive protein 1 OS=Arabidopsis thaliana OX=3702 GN=COI1 PE=1 SV=1
+21.0	4.4	7	34.615	Q93ZM9	Protein TIFY 9 OS=Arabidopsis thaliana OX=3702 GN=TIFY9 PE=1 SV=1
+21.3	4.7	8	33.333	Q9ZR72	ABC transporter B family member 1 OS=Arabidopsis thaliana OX=3702 GN=ABCB1 PE=1 SV=1
+21.3	5.2	5	41.176	O22476	Protein BRASSINOSTEROID INSENSITIVE 1 OS=Arabidopsis thaliana OX=3702 GN=BRI1 PE=1 SV=1
+# BLAST processed 1 queries

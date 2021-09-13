@@ -1,0 +1,36 @@
+#	Name:			PISM00478
+#	Creating user name:	baoopengkun
+#	Creation time:		Wed Feb 27 22:08:35 2019
+
+#	Modifying user name:	baoopengkun
+#	Modification time:	Wed Feb 27 22:09:06 2019
+
+@<TRIPOS>MOLECULE
+PISM00478
+    7     7     1     1     0
+SMALL
+GAST_HUCK
+
+
+@<TRIPOS>ATOM
+      1 C1         23.1277    3.6801  -10.7644 C.2       1 <1>        -0.0839 
+      2 C2         24.5821    4.1043  -10.6777 C.3       1 <1>        -0.0165 
+      3 C3         23.9886    2.7188  -10.5015 C.2       1 <1>        -0.0839 
+      4 H1         22.0909    3.9700  -10.9296 H         1 <1>         0.0572 
+      5 H2         24.9045    4.6409   -9.7731 H         1 <1>         0.0350 
+      6 H3         25.1078    4.3196  -11.6197 H         1 <1>         0.0350 
+      7 H4         24.1577    1.6623  -10.2983 H         1 <1>         0.0572 
+@<TRIPOS>BOND
+     1    2    1 1    
+     2    2    3 1    
+     3    1    3 2    
+     4    1    4 1    
+     5    2    5 1    
+     6    2    6 1    
+     7    3    7 1    
+@<TRIPOS>SUBSTRUCTURE
+     1 ****        2 TEMP              0 ****  ****    0 ROOT 
+@<TRIPOS>NORMAL
+@<TRIPOS>FF_PBC
+FORCE_FIELD_SETUP_FEATURE Force Field Setup information
+v1.0  0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 NONE 0 0 0 0 1 0 0 0 0 0 0 0 0

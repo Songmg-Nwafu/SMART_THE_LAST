@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART</title>
+    <!-- Vendor Stylesheets -->
+    <!--<link href="./static/assets/css/reset.css" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" href="./static/assets/css2/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/assets/css2/plugins/animate.min.css">
+    <!-- Icon Fonts -->
+    <link rel="stylesheet" href="./static/assets/fonts/flaticon/flaticon.css">
+    <link rel="stylesheet" href="./static/assets/css2/plugins/font-awesome.min.css">
+    <!-- Tilakam Style sheet -->
+    <link rel="stylesheet" href="./static/assets/css2/style.css">
+    <link rel="stylesheet" href="./static/assets/css2/loading.css">
+    <link rel="stylesheet" href="./static/assets/css2/responsive.css">
+    <!-- MyStyle -->
+    <link rel="stylesheet" href="./static/assets/css/jsa.css">
+    <link rel="stylesheet" href="./static/assets/css/chrome.css">
+    <link rel="stylesheet" href="./static/assets/css/mosaic.css">
+    <!--<link rel="stylesheet" href="./static/assets/css2/mystyle.css">-->
+    <link rel="stylesheet" href="./static/assets/css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="./static/assets/css2/xcConfirm.css"/>
+    <script src="./static/assets/js/jquery-1.9.1.min.js"></script>
+    <script src="./static/assets/js2/xcConfirm.js"></script>
+    <script type="text/javascript" src="./static/assets/js2/JSmol.min.js"></script>
+    <script type="text/javascript" src="./static/assets/js2/JSmolJME.js"></script>
+    <!-- <script type="text/javascript" language="javascript" src="./static/assets/js2/jsme.nocache.js"></script>-->
+    <script type="text/javascript" language="javascript" src="./static/assets/js2/jsme/jsme.nocache.js"></script>
+    <!--<script type="text/javascript">
+
+      //this function will be called after the JavaScriptApplet code has been loaded.
+      function jsmeOnLoad() {
+
+          //Instantiate a new JSME:
+          //arguments: HTML id, width, height (must be string not number!)
+
+          jsmeApplet = new JSApplet.JSME("appletContainer", "380px", "340px", {
+              //optional parameters
+              "options" : "query,hydrogens"
+          });
+
+          //Alternative method: the size is not specified: the applet will use 100% of the space of its parent container "appletContainer".
+          //Be sure that the parent container size > 0, otherwise the applet will not be visible
+
+          /*      jsmeApplet = new JSApplet.JSME("appletContainer",  {
+           //optional parameters
+           "options" : "query,hydrogens",
+           "jme" : startingStructure
+           });
+           */
+
+          //Opera patch: if some applet elements are not displayed, force repaint
+          //jsmeApplet.deferredRepaint(); //the applet will be repainted after the browser event loop returns
+          //it is recommended to use it if the JSME is created outside this jsmeOnLoad() function
+
+          //jsmeApplet has the same API as the original Java applet
+          //One can mimic the JME Java applet access to simplify the adaptation of HTML and JavaScript code:
+          document.JME = jsmeApplet;
+
+          //suggestion
+          //all buttons that access the jsme variable were disabled in the html
+          //Now enable all buttons that can access the jsme variable since the applet is ready
+          //example:
+          //document.getElementById("button").disabled=false;
+
+      }
+
+      function readMolecule() {
+          var jme = "16 17 C 7.37 -8.99 C 7.37 -7.59 C 6.16 -6.89 C 4.95 -7.59 C 4.95 -8.99 C 6.16 -9.69 N 8.58 -6.89 C 8.58 -5.49 C 7.37 -4.79 O 6.16 -5.49 C 9.80 -7.59 O 9.80 -8.99 C 11.01 -6.89 Cl 12.22 -7.59 Cl 11.01 -5.49 C 9.80 -4.79 1 2 1 2 3 2 3 4 1 4 5 2 5 6 1 6 1 2 7 8 1 8 9 1 9 10 1 3 10 1 2 7 1 7 11 1 11 12 2 11 13 1 13 14 1 13 15 1 8 16 1";
+          jsmeApplet.readMolecule(jme); // or document.JME.readMolecule(jme);
+      }
+
+      function readMultipart() {
+          var jme = "9 9 C 6.68 -7.15 C 5.47 -6.45 C 4.26 -7.15 C 4.26 -8.55 C 5.47 -9.25 C 6.68 -8.55 C 5.47 -5.05 O- 6.68 -4.35 O 4.26 -4.35 1 2 1 2 3 2 3 4 1 4 5 2 5 6 1 6 1 2 2 7 1 7 8 1 7 9 2|1 0 Na+ 12.21 -6.61";
+          jsmeApplet.readMolecule(jme) // or document.JME.readMolecule(jme
+      }
+
+      function readReaction() {
+          var jme = "3 2 C:1 1.41 -7.12 O:2 1.41 -5.72 Cl 2.63 -7.82 1 2 2 1 3 1|3 2 N:3 5.72 -6.78 C:4 7.12 -6.78 H:5 5.02 -7.99 1 2 1 1 3 1 >> 5 4 C:1 13.51 -6.40 O:2 13.51 -5.00 N:3 14.72 -7.10 C:4 15.94 -6.40 H:5 14.71 -8.50 1 2 2 1 3 1 3 4 1 3 5 1";
+          jsmeApplet.readMolecule(jme);
+      }
+
+      function getMolfile() {
+          var data = document.JME.molFile();
+          document.getElementById("jme_output").value = data;
+
+      }
+
+      function getJMEstring() {
+          var data = document.JME.jmeFile();
+          // document.getElementById("jme_output").value = data;
+      }
+  </script>-->
+</head>
+
+<body>
+
+
+<!-- Header Start -->
+<header class="sigma_header header-1 can-sticky header-absolute header-light">
+
+    <!-- Middle Header Start -->
+    <div class="sigma_header-middle">
+        <div class="container">
+            <nav class="navbar">
+
+                <!-- Logo Start -->
+                <div class="sigma_logo-wrapper">
+                    <a class="navbar-brand" href="index">
+                        <img src="./static/assets/img/SMART_logo2.svg" alt="logo">
+                    </a>
+                </div>
+                <!-- Logo End -->
+
+                <ul class="navbar-nav">
+                    <li class="menu-item">
+                        <a href="index">Home</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">Browse</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="Browse_C">Molecule</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="Browse_P">Pathway</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="Browse_T">Target</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">Search</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="Search_text">Text</a></li>
+                            <li class="menu-item"><a href="Search_Structure">Structure</a></li>
+                            <li class="menu-item"><a href="Search_sequence">Sequence</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">Download</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="./static/download/SMILES.zip">2D structure files</a></li>
+                            <li class="menu-item"><a href="./static/download/mol2.zip">3D structure files</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="greeting">Contribute</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="help">Help</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="citingus">Contact</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Middle Header End -->
+
+</header>
+<!-- Header End -->
+
+
+<!-- Banner Start -->
+<div class="sigma_banner banner-3" style="height: 105px;background-image: url('./static/assets/img/head-stat.png');">
+</div>
+
+<div class="structure-content">
+    <div class="structure-title">
+        <img src="./static/assets/img/Search_structure.svg" alt="">
+    </div>
+    <div class="structure-left clearfix">
+        <p>Drawing molecular structure</p>
+        <!-- <table align="center">
+           <tr>
+             <td id="appletContainer"></td>
+           </tr>
+         </table>-->
+        <div class="enterJME" name="jme" code="JME.class" width=380 height=340>
+            You have to enable JavaScript in your browser to use JSME !
+        </div>
+    </div>
+    <div class="structure-right">
+        <form action="Search_structure_resultBySmile" class="form1" enctype="multipart/form-data" method="post">
+            <p>SMILES format</p>
+            <input type="text" name="SMILE-format" id="smiles" value="">
+            <input id="min1" type="text" name="min1" style="display:none">
+            <input id="fingerprint1" type="text" name="fingerprint1" style="display:none">
+            <input type="button" value="Search" onclick="changeSmiles()">
+        </form>
+        <div class="similarity">
+            <p>Min Similarity</p>
+            <select name="selectMin1" id="selectMin1">
+                <option value="0.4" selected>0.4</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.7">0.7</option>
+                <option value="0.8">0.8</option>
+                <option value="0.9">0.9</option>
+            </select>
+        </div>
+        <div class="similarity" style="margin-left: 25px">
+            <p>Features</p>
+            <select name="selectFingerPrint1" id="selectFingerPrint1">
+                <option value="none" selected>Dragon descriptors</option>
+                <option value="ECFP">Extended Connectivity FINGERPRINTS(ECFP)</option>
+                <option value="PFP">Path FINGERPRINTS(PFP)</option>
+            </select>
+        </div>
+        <form action="Search_structure_result" class="form2" enctype="multipart/form-data" method="post" onsubmit="changeSmiles2()">
+            <p>Or upload files</p>
+            <p>Input structure format :.mol2 .SMILES</p>
+            <input id="lefile" type="file" name="lefile" style="display:none" accept=".mol2, .smiles">
+            <input id="min2" type="text" name="min2" style="display:none">
+            <input id="fingerprint2" type="text" name="fingerprint2" style="display:none">
+            <div class="input-append">
+                <input id="photoCover" class="input-large" type="text">
+                <a class="btn" onclick="$('input[id=lefile]').click();"></a>
+            </div>
+            <input type="submit" value="Search">
+        </form>
+
+        <div class="similarity">
+            <p>Min Similarity</p>
+            <select name="selectMin2" id="selectMin2">
+                <option value="0.4" selected>0.4</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.7">0.7</option>
+                <option value="0.8">0.8</option>
+                <option value="0.9">0.9</option>
+            </select>
+        </div>
+        <div class="similarity" style="margin-left: 25px">
+            <p>Features</p>
+            <select name="selectFingerPrint2" id="selectFingerPrint2">
+                <option value="none" selected>Dragon descriptors</option>
+                <option value="ECFP">Extended Connectivity FINGERPRINTS(ECFP)</option>
+                <option value="PFP">Path FINGERPRINTS(PFP)</option>
+            </select>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+</div>
+<div style="height: 30px"></div>
+
+<footer class="sigma_footer sigma_footer-dark">
+
+    <!-- Middle Footer -->
+    <div class="sigma_footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 footer-widget">
+                    <img src="./static/assets/img/SMART_logo2.svg" class="mb-4" alt="logo">
+                    <p>The Ma Laboratory School of Life Sciences, Northwest A&F University, Yangling, Shaanxi, 712100,
+                        China</p>
+                    <!--<p>Room No.2216, State Key Laboratory of Crop Stress Biology for Arid Areas</p>-->
+                </div>
+                <div class="col-xl-4 col-lg-3 col-md-4 col-sm-12 footer-widget">
+                    <h5 class="widget-title">Information</h5>
+                    <ul>
+                        <li><a href="index">Home</a></li>
+                        <li><a href="greeting">Contribute</a></li>
+                        <li><a href="./static/download/SMILES.zip">2D structure files</a></li>
+                        <li><a href="./static/download/mol2.zip">3D structure files</a></li>
+                        <li><a href="help">Help</a></li>
+                        <li><a href="citingus">Contact</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 d-none d-lg-block footer-widget">
+                    <h5 class="widget-title">About Us</h5>
+                    <ul>
+                        <li><a href="https://bioinfo.nwafu.edu.cn/" target="_blank">MaLab</a></li>
+                        <li><a href="https://scholar.google.com/citations?user=UaWkSkIAAAAJ&hl=en" target="_blank">Google
+                            Scholar</a></li>
+                        <li><a href="https://github.com/cma2015" target="_blank">Github </a></li>
+                        <li><a href="mailto:chuangma2006@gmail.com">Gmail</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="sigma_footer-bottom">
+        <div class="container">
+            <div class="sigma_footer-copyright">
+                <p> Copyright © 2020. All Rights Reserved. </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- Footer End -->
+
+<!-- Vendor Scripts -->
+<script src="./static/assets/js2/plugins/jquery-3.4.1.min.js"></script>
+<script src="./static/assets/js2/plugins/popper.min.js"></script>
+<script src="./static/assets/js2/plugins/bootstrap.min.js"></script>
+<script src="./static/assets/js2/plugins/imagesloaded.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.magnific-popup.min.js"></script>
+
+
+<script src="./static/assets/js2/plugins/jquery.countdown.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.waypoints.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.counterup.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.zoom.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.inview.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.event.move.js"></script>
+
+<script src="./static/assets/js2/plugins/wow.min.js"></script>
+<script src="./static/assets/js2/plugins/isotope.pkgd.min.js"></script>
+<script src="./static/assets/js2/plugins/slick.min.js"></script>
+<script src="./static/assets/js2/plugins/ion.rangeSlider.min.js"></script>
+
+<script src="./static/assets/js2/loading.js"></script>
+<!-- Tilakam Scripts -->
+<script src="./static/assets/js2/main.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+
+        $(".structure-content .structure-left .enterJME").on("mouseup", function () {
+            data = document.jme.smiles();
+            //show.innerHTML="data:"+data;
+            console.log("smiles: " + data);
+            $("#smiles").val(data);
+        });
+
+        $('input[id=lefile]').change(function () {
+            $('#photoCover').val($(this).val());
+        });
+    });
+
+/*    function changeSmiles() {
+        var smiles = document.jme.smiles();
+        $("#min1").val($("#selectMin1 option:selected").val());
+        $("#fingerprint1").val($("#selectFingerPrint1 option:selected").val());
+        if (smiles != '' && smiles != undefined && smiles != null && smiles.length != 0)
+            $("#smiles").val(smiles);
+        else
+            smiles = $("#smiles").val();
+        if (confirm("SMILES string is: \"" + smiles + "\" . Are you sure to submit it?")) {
+            loading1();
+            $(".structure-right .form1").submit();
+        }
+    }*/
+
+    function changeSmiles() {
+        var smiles = document.jme.smiles();
+        $("#min1").val($("#selectMin1 option:selected").val());
+        $("#fingerprint1").val($("#selectFingerPrint1 option:selected").val());
+        if (smiles != '' && smiles != undefined && smiles != null && smiles.length != 0)
+            $("#smiles").val(smiles);
+        else
+            smiles = $("#smiles").val();
+
+        var option = {
+            title: "Confirm",
+            btn: parseInt("0011",2),
+            onOk: function(){
+                loading1();
+                $(".structure-right .form1").submit();
+            },
+            onCancel: function (){
+                return ;
+            }
+        }
+        window.wxc.xcConfirm("SMILES string is: \"" + smiles + "\" . Are you sure to submit it?", "custom", option);
+    }
+
+    function changeSmiles2() {
+        $("#min2").val($("#selectMin2 option:selected").val());
+        $("#fingerprint2").val($("#selectFingerPrint2 option:selected").val());
+        if(typeof ($("#lefile").get(0).files[0]) == "undefined" || $("#lefile").get(0).files[0].size <= 0){
+            var option = {
+                title: "Warning",
+                btn: parseInt("0001",2),
+                onOk: function(){
+                    return;
+                }
+            }
+            window.wxc.xcConfirm("You need to upload the structure file", "custom", option);
+        }
+        loading1();
+        $(".structure-right .form2").submit();
+    }
+
+    function loading1() {
+        $('body').loading({
+            loadingWidth: 240,
+            title: 'Loading!',
+            name: 'test',
+            discription: 'process of calculation',
+            direction: 'column',
+            type: 'origin',
+            // originBg:'#71EA71',
+            originDivWidth: 40,
+            originDivHeight: 40,
+            originWidth: 6,
+            originHeight: 6,
+            smallLoading: false,
+            loadingMaskBg: 'rgba(0,0,0,0.2)'
+        });
+
+    }
+</script>
+</body>
+
+</html>

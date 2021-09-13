@@ -1,0 +1,48 @@
+#	Name:			PISM01159
+#	Creating user name:	baoopengkun
+#	Creation time:		Tue Dec 18 15:58:55 2018
+
+#	Modifying user name:	baoopengkun
+#	Modification time:	Tue Dec 18 15:59:40 2018
+
+@<TRIPOS>MOLECULE
+PISM01159
+   13    13     1     1     0
+SMALL
+GAST_HUCK
+
+
+@<TRIPOS>ATOM
+      1 O1          2.6169   12.2086    0.8379 O.3       1 PHENYL     -0.3310 
+      2 C           3.9354   12.0917    1.2888 C.ar      1 PHENYL      0.0908 
+      3 C           4.6487   10.8928    1.1588 C.ar      1 PHENYL     -0.0304 
+      4 C           5.9665   10.8061    1.6186 C.ar      1 PHENYL     -0.0611 
+      5 C           6.5784   11.9151    2.2098 C.ar      1 PHENYL      0.0012 
+      6 C           5.8695   13.1122    2.3419 C.ar      1 PHENYL     -0.0611 
+      7 C           4.5522   13.1970    1.8816 C.ar      1 PHENYL     -0.0304 
+      8 Br8         8.3250   11.7983    2.8168 Br        1 PHENYL     -0.0600 
+      9 H1          2.2627   11.4176    0.4479 H         1 PHENYL      0.2492 
+     10 H2          4.1879   10.0230    0.7020 H         1 PHENYL      0.0549 
+     11 H3          6.5164    9.8758    1.5166 H         1 PHENYL      0.0615 
+     12 H4          6.3414   13.9749    2.8014 H         1 PHENYL      0.0615 
+     13 H5          3.9995   14.1253    1.9827 H         1 PHENYL      0.0549 
+@<TRIPOS>BOND
+     1    2    3 ar   
+     2    2    7 ar   
+     3    7    6 ar   
+     4    6    5 ar   
+     5    5    4 ar   
+     6    4    3 ar   
+     7    2    1 1    
+     8    5    8 1    
+     9    1    9 1    
+    10    3   10 1    
+    11    4   11 1    
+    12    6   12 1    
+    13    7   13 1    
+@<TRIPOS>SUBSTRUCTURE
+     1 PHENYL      2 PERM              0 ****  ****    0 ROOT 
+@<TRIPOS>NORMAL
+@<TRIPOS>FF_PBC
+FORCE_FIELD_SETUP_FEATURE Force Field Setup information
+v1.0  0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 NONE 0 0 0 0 1 0 0 0 0 0 0 0 0

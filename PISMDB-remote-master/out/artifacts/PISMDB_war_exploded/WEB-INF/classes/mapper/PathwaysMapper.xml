@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nwafu.PISMDB.dao.PathwaysDao">
+    <resultMap id="PathwayMap" type="com.nwafu.PISMDB.entity.Pathways">
+        <id column="PathwayID" property="PathwayID" jdbcType="VARCHAR"></id>
+        <!--<result column="PISMID" property="PISMID" jdbcType="VARCHAR"></result>-->
+        <!--<result column="TargetID" property="TargetID" jdbcType="VARCHAR"></result>-->
+        <result column="PathwayName" property="PathwayName" jdbcType="VARCHAR"></result>
+        <!--<result column="PathwayInformation" property="PathwayInformation" jdbcType="VARCHAR"></result>-->
+    </resultMap>
+    <select id="getPathwaysCount" resultType="java.lang.Integer">
+        select count(*)
+        from pathway
+    </select>
+</mapper>

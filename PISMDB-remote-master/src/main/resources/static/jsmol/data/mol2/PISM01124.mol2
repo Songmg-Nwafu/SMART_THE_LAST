@@ -1,0 +1,72 @@
+#	Name:			PISM01124
+#	Creating user name:	14062
+#	Creation time:		Sat Apr 06 23:08:29 2019
+
+#	Modifying user name:	14062
+#	Modification time:	Sat Apr 06 23:11:07 2019
+
+@<TRIPOS>MOLECULE
+PISM01124
+   24    25     2     1     0
+SMALL
+GAST_HUCK
+
+
+@<TRIPOS>ATOM
+      1 O1          1.0022    7.8596   -1.9575 O.3       2 BENZYL     -0.3359 
+      2 Cl2         4.6198    7.1719   -5.5478 Cl        2 BENZYL     -0.0832 
+      3 C2         -2.7560    5.5721   -4.6132 C.ar      1 BENZYL     -0.0276 
+      4 C3         -3.7852    5.4233   -5.5478 C.ar      1 BENZYL     -0.0558 
+      5 C4         -4.1058    6.4795   -6.4045 C.ar      1 BENZYL      0.0295 
+      6 C5         -3.4180    7.6924   -6.3069 C.ar      1 BENZYL     -0.0419 
+      7 C6         -2.3830    7.8392   -5.3783 C.ar      1 BENZYL      0.0726 
+      8 C7         -2.0459    6.7726   -4.5375 C.ar      1 BENZYL      0.1281 
+      9 O9         -1.0060    6.8980   -3.6175 O.3       2 BENZYL     -0.2599 
+     10 C2          0.3079    6.9506   -4.1000 C.ar      2 BENZYL      0.1456 
+     11 C3          0.6383    6.5235   -5.3936 C.ar      2 BENZYL     -0.0358 
+     12 C4          1.9645    6.5927   -5.8326 C.ar      2 BENZYL     -0.0668 
+     13 C5          2.9632    7.0806   -4.9862 C.ar      2 BENZYL      0.0206 
+     14 C6          2.6355    7.4955   -3.6935 C.ar      2 BENZYL     -0.0268 
+     15 C7          1.3116    7.4348   -3.2517 C.ar      2 BENZYL      0.1219 
+     16 Cl16       -1.5145    9.3563   -5.2684 Cl        1 BENZYL     -0.0778 
+     17 Cl17       -5.3698    6.2811   -7.6010 Cl        1 BENZYL     -0.0806 
+     18 H1          0.0783    7.7474   -1.7536 H         2 BENZYL      0.2447 
+     19 H2         -2.5007    4.7579   -3.9434 H         1 BENZYL      0.0551 
+     20 H3         -4.3347    4.4888   -5.6093 H         1 BENZYL      0.0598 
+     21 H4         -3.6888    8.5215   -6.9522 H         1 BENZYL      0.0602 
+     22 H5         -0.1169    6.1328   -6.0673 H         2 BENZYL      0.0521 
+     23 H6          2.2252    6.2668   -6.8347 H         2 BENZYL      0.0504 
+     24 H7          3.4058    7.8661   -3.0265 H         2 BENZYL      0.0516 
+@<TRIPOS>BOND
+     1   15    1 1    
+     2    3    4 ar   
+     3    3    8 ar   
+     4    8    7 ar   
+     5    7    6 ar   
+     6    6    5 ar   
+     7    5    4 ar   
+     8   13    2 1    
+     9    9   10 1    
+    10   10   11 ar   
+    11   10   15 ar   
+    12   15   14 ar   
+    13   14   13 ar   
+    14   13   12 ar   
+    15   12   11 ar   
+    16    8    9 1    
+    17    7   16 1    
+    18    5   17 1    
+    19    1   18 1    
+    20    3   19 1    
+    21    4   20 1    
+    22    6   21 1    
+    23   11   22 1    
+    24   12   23 1    
+    25   14   24 1    
+@<TRIPOS>SUBSTRUCTURE
+     1 BENZYL      3 PERM              0 ****  ****    1 ROOT 
+     2 BENZYL      9 PERM              0 ****  ****    1  
+@<TRIPOS>NORMAL
+@<TRIPOS>FF_PBC
+FORCE_FIELD_SETUP_FEATURE Force Field Setup information
+v1.0  0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 NONE 0 0 0 0 1 0 0 0 0 0 0 0 0

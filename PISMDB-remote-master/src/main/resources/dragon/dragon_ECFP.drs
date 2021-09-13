@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DRAGON version="7.0.10" description="Dragon7 - FP1" script_version="2" generation_date="2021/09/02">
+  <OPTIONS>
+    <CheckUpdates value="true"/>
+    <PreserveTemporaryProjects value="true"/>
+    <SaveLayout value="true"/>
+    <Decimal_Separator value="."/>
+    <Missing_String value="na"/>
+    <DefaultMolFormat value="6"/>
+    <RejectDisconnectedStrucuture value="false"/>
+    <RetainBiggestFragment value="false"/>
+    <RejectUnusualValence value="false"/>
+    <Add2DHydrogens value="false"/>
+    <DisconnectedCalculationOption value="0"/>
+    <MaxSRforAllCircuit value="19"/>
+    <MaxSRDetour value="30"/>
+    <MaxAtomWalkPath value="2000"/>
+    <RoundCoordinates value="true"/>
+    <RoundWeights value="true"/>
+    <LogPathWalk value="true"/>
+    <LogEdge value="true"/>
+    <Weights>
+      <weight name="Mass"/>
+      <weight name="VdWVolume"/>
+      <weight name="Electronegativity"/>
+      <weight name="Polarizability"/>
+      <weight name="Ionization"/>
+      <weight name="I-State"/>
+    </Weights>
+    <SaveOnlyData value="false"/>
+    <SaveLabelsOnSeparateFile value="false"/>
+    <SaveFormatBlock value="%b - %n.txt"/>
+    <SaveFormatSubBlock value="%b-%s - %n - %m.txt"/>
+    <SaveExcludeMisVal value="false"/>
+    <SaveExcludeAllMisVal value="false"/>
+    <SaveExcludeConst value="false"/>
+    <SaveExcludeNearConst value="false"/>
+    <SaveExcludeStdDev value="false"/>
+    <SaveStdDevThreshold value="0.0001"/>
+    <SaveExcludeCorrelated value="false"/>
+    <SaveCorrThreshold value="0.95"/>
+    <SaveExclusionOptionsToVariables value="false"/>
+    <SaveExcludeMisMolecules value="false"/>
+    <SaveExcludeRejectedMolecules value="false"/>
+    <RoundDescriptorValues value="true"/>
+    <AddFormula value="false"/>
+  </OPTIONS>
+  <MOLFILES>
+    <molInput value="file"/>
+    <molFile value="/home/songmg/SMART_Dragon/Data/test.mol2"/>
+  </MOLFILES>
+  <FINGERPRINTS>
+    <ExcludeRejected value="false"/>
+    <MissingFPString value="na"/>
+    <SaveFPToFile value="true"/>
+    <SaveOnlyFP value="false"/>
+    <SaveLabelsOnSeparateFile value="false"/>
+    <Delimiter value="&#x9;"/>
+    <FPheader value="false"/>
+    <SaveFragmentMatrix value="false"/>
+    <SaveFPpath value="/home/songmg/SMART_Dragon/Result"/>
+    <FP id="0">
+      <Type value="ECFP"/>
+      <Size value="1024"/>
+      <BitsPerPattern value="2"/>
+      <MinLength value="0"/>
+      <MaxLength value="2"/>
+      <CountFragments value="true"/>
+      <AtomOptions value="Atom type|Aromaticity|Connectivity (total)|Charge|Bond order"/>
+    </FP>
+  </FINGERPRINTS>
+  <OUTPUT>
+    <knimemode value="false"/>
+    <SaveStdOut value="false"/>
+    <SaveProject value="false"/>
+    <SaveFile value="false"/>
+    <logMode value="none"/>
+  </OUTPUT>
+</DRAGON>

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART</title>
+    <!-- Vendor Stylesheets -->
+    <!--<link href="./static/./static/assets/css/reset.css" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" href="./static/assets/css2/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/assets/css2/plugins/animate.min.css">
+    <!-- Icon Fonts -->
+    <link rel="stylesheet" href="./static/assets/fonts/flaticon/flaticon.css">
+    <link rel="stylesheet" href="./static/assets/css2/plugins/font-awesome.min.css">
+    <!-- Tilakam Style sheet -->
+    <link rel="stylesheet" href="./static/assets/css2/style_upload.css">
+    <link rel="stylesheet" href="./static/assets/css2/responsive.css">
+    <!-- MyStyle -->
+    <link rel="stylesheet" href="./static/assets/css/jsa.css">
+    <link rel="stylesheet" href="./static/assets/css/chrome.css">
+    <link rel="stylesheet" href="./static/assets/css/mosaic.css">
+
+    <link href="./static/assets2/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/assets2/css/icons.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Icons Css -->
+    <!--    <link href="./static/assets2/css/icons.min.css" rel="stylesheet" type="text/css"/> -->
+    <!-- Bootstrap Css -->
+    <link href="./static/assets2/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css"/>
+    <!-- App Css-->
+    <link href="./static/assets2/css/app.min.css" id="app-style" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" type="text/css" href="./static/assets/css2/xcConfirm.css"/>
+    <script src="./static/assets/js/jquery-1.9.1.min.js"></script>
+    <script src="./static/assets/js2/xcConfirm.js"></script>
+    <!--<link rel="stylesheet" href="./static/./static/assets/css2/mystyle.css">-->
+    <!-- <link rel="stylesheet" href="./static/assets/css/main.css"> -->
+    <script type="text/javascript" src="./static/assets/js2/JSmol.min.js"></script>
+    <script type="text/javascript" src="./static/assets/js2/JSmolJME.js"></script>
+    <script type="text/javascript" language="javascript" src="./static/assets/js2/jsme/jsme.nocache.js"></script>
+
+</head>
+
+<body>
+
+
+<!-- Header Start -->
+<header class="sigma_header header-1 can-sticky header-absolute header-light">
+
+    <!-- Middle Header Start -->
+    <div class="sigma_header-middle">
+        <div class="container">
+            <nav class="navbar">
+
+                <!-- Logo Start -->
+                <div class="sigma_logo-wrapper">
+                    <a class="navbar-brand" href="index">
+                        <img src="./static/assets/img/SMART_logo2.svg" alt="logo">
+                    </a>
+                </div>
+                <!-- Logo End -->
+
+                <ul class="navbar-nav">
+                    <li class="menu-item">
+                        <a href="index">Home</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">Browse</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="Browse_C">Molecule</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="Browse_P">Pathway</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="Browse_T">Target</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">Search</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="Search_text">Text</a></li>
+                            <li class="menu-item"><a href="Search_Structure">Structure</a></li>
+                            <li class="menu-item"><a href="Search_sequence">Sequence</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">Download</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="./static/download/SMILES.zip">2D structure files</a></li>
+                            <li class="menu-item"><a href="./static/download/mol2.zip">3D structure files</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="greeting">Contribute</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="help">Help</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="citingus">Contact</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Middle Header End -->
+
+</header>
+<!-- Header End -->
+
+
+<!-- Banner Start -->
+<div class="sigma_banner banner-3" style="height: 105px;background-image: url('./static/assets/img/head-stat.png');">
+</div>
+<div id="layout-wrapper">
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="upload-title" style="width: 400px;
+    height: 120px;
+    margin: 20px auto;">
+        <img src="./static/assets/img/Upload.svg" alt="">
+    </div>
+    <div class="main-content" style="margin-top: 30px;">
+
+        <div class="page-content">
+
+            <div class="container-fluid">
+
+                <div class="page-content-wrapper">
+
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-4"></h4>
+                                    <form id="siteForm">
+                                        <div id="progrss-wizard" class="twitter-bs-wizard">
+                                            <ul class="twitter-bs-wizard-nav nav-justified">
+                                                <li class="nav-item wizard-border">
+                                                    <a href="#progress-seller-details" class="nav-link"
+                                                       data-toggle="tab" id="molecule">
+                                                        <span class="step-number">01. Molecule</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item wizard-border">
+                                                    <a href="#progress-company-document" class="nav-link"
+                                                       data-toggle="tab">
+                                                        <span class="step-number" id="targeting">02. Targeting Protein</span>
+                                                    </a>
+                                                </li>
+
+                                                <li class="nav-item wizard-border">
+                                                    <a href="#progress-bank-detail" class="nav-link" data-toggle="tab">
+                                                        <span class="step-number" id="userinfo">03. User Information</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#progress-confirm-detail" class="nav-link"
+                                                       data-toggle="tab">
+                                                        <span class="step-number">04. Confirm Detail</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                            <div id="bar" class="progress mt-4">
+                                                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"></div>
+                                            </div>
+                                            <div class="tab-content twitter-bs-wizard-tab-content">
+
+                                                <div class="tab-pane" id="progress-seller-details">
+
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="iupacName">IUPAC
+                                                                    Name</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="iupacName"
+                                                                       name="iupacName">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="chemicalName">Chemical
+                                                                    Name</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="chemicalName"
+                                                                       name="chemicalName">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="chemicalFormula">Chemical
+                                                                    Formula</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="chemicalFormula"
+                                                                       name="chemicalFormula">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="smiles">SMILES</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="smiles"
+                                                                       name="smiles">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Or drawing molecular
+                                                                    structure</label>
+                                                                <div id="enterJME" class="enterJME" name="jme"
+                                                                     code="JME.class" width=430 height=320>
+                                                                    You have to enable JavaScript in your browser to use
+                                                                    JSME !
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="molecularWeight">Molecular
+                                                                    Weight</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="molecularWeight"
+                                                                       name="molecularWeight">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="alogp">
+                                                                    Alog P</label>
+                                                                <input type="text" class="form-control"
+                                                                       id="alogp"
+                                                                       name="alogp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="2D_structure">2D
+                                                                    structure(.png)</label>
+                                                                <input type="file" class="form-control"
+                                                                       id="2D_structure" accept="image/png"
+                                                                       style="display:none"
+                                                                       onchange="changeAgentContent_2D()">
+                                                                <div class="row">
+                                                                    <div class="col-lg-2">
+                                                                        <input type="button" class="form-control"
+                                                                               onclick="document.getElementById('2D_structure').click()"
+                                                                               value="Browse"/>
+                                                                    </div>
+                                                                    <div class="col-lg-10">
+                                                                        <input type="text" class="form-control"
+                                                                               value="No file to choose" disabled
+                                                                               id="inputFileAgent_2D"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="3D_structure">3D
+                                                                    structure(.mol2)</label>
+                                                                <input type="file" class="form-control"
+                                                                       id="3D_structure" accept=".mol2"
+                                                                       style="display:none"
+                                                                       onchange="changeAgentContent_3D()">
+                                                                <div class="row">
+                                                                    <div class="col-lg-2">
+                                                                        <input type="button" class="form-control"
+                                                                               onclick="document.getElementById('3D_structure').click()"
+                                                                               value="Browse"/>
+                                                                    </div>
+                                                                    <div class="col-lg-10">
+                                                                        <input type="text" class="form-control"
+                                                                               value="No file to choose" disabled
+                                                                               id="inputFileAgent_3D"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"
+                                                                       for="function">Function &
+                                                                    Phenotype</label>
+                                                                <textarea id="function"
+                                                                          class="form-control" rows="3"
+                                                                          name="functionandphen"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <ul class="pager wizard twitter-bs-wizard-pager-link">
+                                                        <li class="next"><a href="#">Next<i
+                                                                class="mdi mdi-arrow-right ms-1"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane" id="progress-company-document">
+                                                    <div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Protein</label>
+
+                                                                    <select class="select2 form-control select2-multiple"
+                                                                            multiple="multiple"
+                                                                            data-placeholder="Choose ..."
+                                                                            name="protein" id="proteinList">
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Pathway</label>
+
+                                                                    <select class="select2 form-control select2-multiple"
+                                                                            multiple="multiple"
+                                                                            data-placeholder="Choose ..."
+                                                                            name="pathway" id="pathway">
+                                                                        <option value="PP001">Cell Wall Synthesis
+                                                                        </option>
+                                                                        <option value="PP002">Membrane Trafficking
+                                                                        </option>
+                                                                        <option value="PP003">Auxin Signaling</option>
+                                                                        <option value="PP004">ABA Signaling</option>
+                                                                        <option value="PP005">Ethylene Signaling
+                                                                        </option>
+                                                                        <option value="PP006">Gibberellin Signaling
+                                                                        </option>
+                                                                        <option value="PP007">JA Signaling</option>
+                                                                        <option value="PP008">SA Signaling</option>
+                                                                        <option value="PP009">BR Signaling</option>
+                                                                        <option value="PP010">SL Signaling</option>
+                                                                        <option value="PP011">Others</option>
+                                                                    </select>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="supplementary">Supplementary About Molecule</label>
+                                                                    <textarea id="supplementary"
+                                                                              class="form-control"
+                                                                              rows="3" name="supplementary"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-muted mb-3 font-18">
+                                                            If the protein does not exist in the SMART database, you can
+                                                            add it here：
+                                                        </p>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="progress-basicpill-cstno-input">Protein
+                                                                        Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                           id="progress-basicpill-cstno-input"
+                                                                           name="proteinName">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="progress-basicpill-servicetax-input">Uniprot
+                                                                        ID(split by ",")</label>
+                                                                    <input type="text" class="form-control"
+                                                                           id="progress-basicpill-servicetax-input"
+                                                                           name="uniprotID">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="progress-basicpill-companyuin-input">Organism</label>
+                                                                    <input type="text" class="form-control"
+                                                                           id="progress-basicpill-companyuin-input"
+                                                                           name="organism">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="sequence">Sequence(.fasta)</label>
+                                                                    <input type="file" class="form-control"
+                                                                           id="sequence"
+                                                                           accept=".fasta" style="display:none"
+                                                                           onchange="changeAgentContent_sequence()">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-2">
+                                                                            <input type="button" class="form-control"
+                                                                                   onclick="document.getElementById('sequence').click()"
+                                                                                   value="Browse"/>
+                                                                        </div>
+                                                                        <div class="col-lg-10">
+                                                                            <input type="text" class="form-control"
+                                                                                   value="No file to choose" disabled
+                                                                                   id="inputFileAgent_sequence"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <ul class="pager wizard twitter-bs-wizard-pager-link">
+                                                            <li class="previous"><a href="#"><i
+                                                                    class="mdi mdi-arrow-left me-1"></i>
+                                                                Prev</a></li>
+                                                            <li class="next"><a href="#">Next<i
+                                                                    class="mdi mdi-arrow-right ms-1"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="progress-bank-detail">
+                                                    <div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                           for="username">Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                           id="username"
+                                                                           name="userName">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label>Department</label>
+                                                                    <input type="text" class="form-control"
+                                                                           id="department"
+                                                                           name="department">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label" for="email">Email
+                                                                        address</label>
+                                                                    <input id="email"
+                                                                           class="form-control input-mask"
+                                                                           data-inputmask="'alias': 'email'"
+                                                                           name="emailAddress">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <ul class="pager wizard twitter-bs-wizard-pager-link">
+                                                            <li class="previous"><a href="#"><i
+                                                                    class="mdi mdi-arrow-left me-1"></i>
+                                                                Prev</a></li>
+                                                            <li class="next"><a href="#">Next <i
+                                                                    class="mdi mdi-arrow-right ms-1"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane" id="progress-confirm-detail">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-lg-6">
+                                                            <div class="text-center">
+                                                                <div class="mb-4">
+                                                                    <i class="mdi mdi-check-circle-outline text-success display-4"></i>
+                                                                </div>
+                                                                <div>
+                                                                    <h5>Confirm Detail</h5>
+                                                                    <p class="text-muted">If you have any questions,
+                                                                        please <a href="citingus">contact
+                                                                            with us</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <ul class="pager wizard twitter-bs-wizard-pager-link">
+                                                        <li class="previous"><a href="#"><i
+                                                                class="mdi mdi-arrow-left me-1"></i>
+                                                            Prev</a></li>
+                                                        <li class="float-end"><a href="javascript:;" id="confirm"
+                                                                                 onclick="confirm_upload()">Confirm <i
+                                                                class="mdi mdi-arrow-right ms-1"></i></a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+
+                </div>
+
+
+            </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+    </div>
+</div>
+</div>
+<div style="height: 30px"></div>
+<footer class="sigma_footer sigma_footer-dark">
+
+    <!-- Middle Footer -->
+    <div class="sigma_footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 footer-widget">
+                    <img src="./static/assets/img/SMART_logo2.svg" class="mb-4" alt="logo">
+                    <p>The Ma Laboratory School of Life Sciences, Northwest A&F University, Yangling, Shaanxi, 712100,
+                        China</p>
+                    <!--<p>Room No.2216, State Key Laboratory of Crop Stress Biology for Arid Areas</p>-->
+                </div>
+                <div class="col-xl-4 col-lg-3 col-md-4 col-sm-12 footer-widget">
+                    <h5 class="widget-title">Information</h5>
+                    <ul>
+                        <li><a href="index">Home</a></li>
+                        <li><a href="greeting">Contribute</a></li>
+                        <li><a href="./static/download/SMILES.zip">2D structure files</a></li>
+                        <li><a href="./static/downlaod/mol2.zip">3D structure files</a></li>
+                        <li><a href="help">Help</a></li>
+                        <li><a href="citingus">Contact</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 d-none d-lg-block footer-widget">
+                    <h5 class="widget-title">About Us</h5>
+                    <ul>
+                        <li><a href="https://bioinfo.nwafu.edu.cn/" target="_blank">MaLab</a></li>
+                        <li><a href="https://scholar.google.com/citations?user=UaWkSkIAAAAJ&hl=en" target="_blank">Google
+                            Scholar</a></li>
+                        <li><a href="https://github.com/cma2015" target="_blank">Github</a></li>
+                        <li><a href="mailto:chuangma2006@gmail.com">Gmail</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="sigma_footer-bottom">
+        <div class="container">
+            <div class="sigma_footer-copyright">
+                <p> Copyright © 2020. All Rights Reserved. </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- Footer End -->
+
+<!-- Vendor Scripts -->
+<script src="./static/assets/js2/plugins/jquery-3.4.1.min.js"></script>
+<script src="./static/assets/js2/plugins/popper.min.js"></script>
+<script src="./static/assets/js2/plugins/bootstrap.min.js"></script>
+<script src="./static/assets/js2/plugins/imagesloaded.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.magnific-popup.min.js"></script>
+
+
+<script src="./static/assets/js2/plugins/jquery.countdown.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.waypoints.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.counterup.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.zoom.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.inview.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.event.move.js"></script>
+
+<script src="./static/assets/js2/plugins/wow.min.js"></script>
+<script src="./static/assets/js2/plugins/isotope.pkgd.min.js"></script>
+<script src="./static/assets/js2/plugins/slick.min.js"></script>
+<script src="./static/assets/js2/plugins/ion.rangeSlider.min.js"></script>
+
+
+<script src="./static/assets2/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- twitter-bootstrap-wizard js -->
+<script src="./static/assets2/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="./static/assets2/libs/twitter-bootstrap-wizard/prettify.js"></script>
+
+<!-- form wizard init -->
+<script src="./static/assets2/js/pages/form-wizard.init.js"></script>
+<script src="./static/assets2/libs/select2/js/select2.min.js"></script>
+
+<!-- form mask -->
+<script src="./static/assets2/libs/inputmask/jquery.inputmask.min.js"></script>
+
+
+<!-- form mask init -->
+<script src="./static/assets2/js/pages/form-mask.init.js"></script>
+
+<script src="./static/assets2/js/pages/form-advanced.init.js"></script>
+
+<script src="./static/assets2/libs/select2/js/select2.min.js"></script>
+
+<!-- Tilakam Scripts -->
+<script src="./static/assets/js2/main.js"></script>
+
+
+<script>
+
+    function initTargetSelect(data){
+        for(var i = 0;i < data.length;i++)
+        {
+            $("#proteinList").append('<option value="'+data[i].targetID+'">'+data[i].targetID+"&nbsp;&nbsp;"+data[i].proteinName+'</option>');
+        }
+    }
+
+    $(document).ready(function () {
+        $("#enterJME").on("mouseup", function () {
+            data = document.jme.smiles();
+            //show.innerHTML="data:"+data;
+            console.log("smiles: " + data);
+            $("#smiles").val(data);
+        });
+        $.ajax({
+            url: "http://39.101.176.205:4010/SMART/getAllProteinName?callback=?",
+            type: "get",
+            async: true,
+            dataType: "jsonp",  //数据格式设置为jsonp
+            jsonp: "callback",
+            contentType: 'application/json',
+            success: function (data) {
+                console.log(data);
+                initTargetSelect(data);
+            }
+        })
+    });
+
+    function changeAgentContent_2D() {
+        document.getElementById("inputFileAgent_2D").value = document.getElementById("2D_structure").value;
+    }
+
+    function changeAgentContent_3D() {
+        document.getElementById("inputFileAgent_3D").value = document.getElementById("3D_structure").value;
+    }
+
+    function changeAgentContent_sequence() {
+        document.getElementById("inputFileAgent_sequence").value = document.getElementById("sequence").value;
+    }
+
+    function confirm_upload(){
+        var option = {
+            title: "Tip",
+            btn: parseInt("0011",2),
+            onOk: function(){
+                upload_form()
+            },
+            onCancel: function (){
+                return;
+            }
+        }
+        window.wxc.xcConfirm("Are you sure to submit?", "custom", option);
+    }
+
+    function upload_form() {
+
+        let iupacname = $.trim($("#iupacName").val());
+        let chemicalname = $.trim($("#chemicalName").val());
+        let chemicalformula = $.trim($("#chemicalFormula").val());
+        let smiles = $.trim($("#smile").val());
+        let mw = $.trim($("#molecularWeight").val());
+        let alogp = $.trim($("#alogp").val());
+        let functionp = $.trim($("#function").val());
+
+        if(iupacname == "" || chemicalname == "" || chemicalformula == "" || smiles == "" || mw == "" || alogp == "" || functionp == ""){
+            var option = {
+                title: "Warning",
+                btn: parseInt("0001",2),
+                onOk: function(){
+                    $("#molecule")[0].click();
+                    return;
+                }
+            }
+            window.wxc.xcConfirm("You need to complete the molecular information", "custom", option);
+            return;
+        }
+
+
+
+        let data = new FormData(document.getElementById("siteForm"));
+        let targetlist = checkselect('proteinList');
+        let pathwaylist = checkselect('pathway');
+        data.set("protein",targetlist);
+        data.set("pathway",pathwaylist);
+        data.set("2Dfile",$("#2D_structure").get(0).files[0]);
+        data.set("3Dfile",$("#3D_structure").get(0).files[0]);
+        data.set("sequencefile",$("#sequence").get(0).files[0]);
+
+        let files = "";
+        if (typeof ($("#2D_structure").get(0).files[0]) == "undefined" || $("#2D_structure").get(0).files[0].size <= 0){
+            files += "0,";
+            var option = {
+                title: "Warning",
+                btn: parseInt("0001",2),
+                onOk: function(){
+                    $("#molecule")[0].click();
+                    return;
+                }
+            }
+            window.wxc.xcConfirm("You need to upload the 2D structure file", "custom", option);
+            return;
+        } else {
+            files += "1,";
+        }
+        if (typeof ($("#3D_structure").get(0).files[0]) == "undefined" || $("#3D_structure").get(0).files[0].size <= 0){
+            files += "0,";
+            var option = {
+                title: "Warning",
+                btn: parseInt("0001",2),
+                onOk: function(){
+                    $("#molecule")[0].click();
+                    return;
+                }
+            }
+            window.wxc.xcConfirm("You need to upload the 3D structure file", "custom", option);
+            return;
+        } else {
+            files += "1,";
+        }
+        if (typeof ($("#sequence").get(0).files[0]) == "undefined" || $("#sequence").get(0).files[0].size <= 0){
+            files += "0,";
+        } else {
+            files += "1,";
+        }
+
+        let sup = $.trim($("#supplementary").val());
+        if(sup == ""){
+            var option = {
+                title: "Warning",
+                btn: parseInt("0001",2),
+                onOk: function(){
+                    $("#targeting")[0].click();
+                    return;
+                }
+            }
+            window.wxc.xcConfirm("You need to complete the supplementary information", "custom", option);
+            return;
+        }
+
+        let username = $.trim($("#username").val());
+        let department = $.trim($("#department").val());
+        let email = $.trim($("#email").val());
+
+        if(department == "" || username == "" || email == ""){
+            var option = {
+                title: "Warning",
+                btn: parseInt("0001",2),
+                onOk: function(){
+                    $("#userinfo")[0].click();
+                    return;
+                }
+            }
+            window.wxc.xcConfirm("You need to complete the user information", "custom", option);
+            return;
+        }
+
+        files = files.substr(0,files.length-1);
+        data.set("files",files);
+
+        $.ajax({
+            url : "http://39.101.176.205:4010/SMART/contribute",
+            type : "post",
+            data : data,
+            dataType : "text",
+            contentType : false,
+            processData : false,
+            success : function(result) {
+                var option = {
+                    title: "Success",
+                    btn: parseInt("0001",2),
+                    onOk: function(){
+
+                    }
+                }
+                window.wxc.xcConfirm("Thank you for your contribution", "custom", option);
+            },
+            error : function () {
+
+            }
+        })
+
+    }
+    function checkselect(objname){
+        var intvalue="";
+        o = document.getElementById(objname);
+        for(let i=0;i<o.length;i++){
+            if(o.options[i].selected){
+                intvalue+=o.options[i].value+"%%";
+            }
+        }
+        return intvalue.substr(0,intvalue.length-2);
+    }
+</script>
+</body>
+
+</html>

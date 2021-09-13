@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMART</title>
+  <!-- Vendor Stylesheets -->
+  <!--<link href="./static/assets/css/reset.css" rel="stylesheet" type="text/css">-->
+  <link rel="stylesheet" href="./static/assets/css2/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/assets/css2/plugins/animate.min.css">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="./static/assets/fonts/flaticon/flaticon.css">
+  <link rel="stylesheet" href="./static/assets/css2/plugins/font-awesome.min.css">
+  <!-- Tilakam Style sheet -->
+  <link rel="stylesheet" href="./static/assets/css2/style.css">
+  <link rel="stylesheet" href="./static/assets/css2/responsive.css">
+  <!-- MyStyle -->
+  <!--<link rel="stylesheet" href="./static/assets/css2/mystyle.css">-->
+  <link rel="stylesheet" href="./static/assets/css2/mystyle.css">
+</head>
+
+<body>
+
+
+<!-- Header Start -->
+<header class="sigma_header header-1 can-sticky header-absolute header-light">
+
+  <!-- Middle Header Start -->
+  <div class="sigma_header-middle">
+    <div class="container">
+      <nav class="navbar">
+
+        <!-- Logo Start -->
+        <div class="sigma_logo-wrapper">
+          <a class="navbar-brand" href="index">
+            <img src="./static/assets/img/SMART_logo2.svg" alt="logo">
+          </a>
+        </div>
+        <!-- Logo End -->
+
+        <ul class="navbar-nav">
+          <li class="menu-item">
+            <a href="index">Home</a>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Browse</a>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="Browse_C">Molecule</a>
+              </li>
+              <li class="menu-item">
+                <a href="Browse_P">Pathway</a>
+              </li>
+              <li class="menu-item">
+                <a href="Browse_T">Target</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Search</a>
+            <ul class="sub-menu">
+              <li class="menu-item"> <a href="Search_text">Text</a> </li>
+              <li class="menu-item"> <a href="Search_Structure">Structure</a> </li>
+              <li class="menu-item"> <a href="Search_sequence">Sequence</a> </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Download</a>
+            <ul class="sub-menu">
+              <li class="menu-item"> <a href="./static/download/SMILES.zip">2D structure files</a> </li>
+              <li class="menu-item"> <a href="./static/download/mol2.zip">3D structure files</a> </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="greeting">Contribute</a>
+          </li>
+          <li class="menu-item">
+            <a href="help">Help</a>
+          </li>
+          <li class="menu-item">
+            <a href="citingus">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- Middle Header End -->
+
+</header>
+<!-- Header End -->
+
+
+  <!-- Banner Start -->
+  <div class="sigma_banner banner-3" style="height: 105px;background-image: url('./static/assets/img/head-stat.png');">
+  </div>
+
+<div class="structureSearch">
+  <!--<div class="search">
+  &lt;!&ndash; <img src="./assets/img/search.png" alt=""> &ndash;&gt;
+  <form action="/SMART/Search_sequence_result">
+    <input type="text" name="sequence_str">
+    <input type="submit" value=" " id="search">
+  </form>
+</div>-->
+</div>
+
+<div class="page">
+  <div class="pageContent"></div>
+</div>
+
+<footer class="sigma_footer sigma_footer-dark">
+
+  <!-- Middle Footer -->
+  <div class="sigma_footer-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 footer-widget">
+          <img src="./static/assets/img/SMART_logo2.svg" class="mb-4" alt="logo">
+          <p>The Ma Laboratory School of Life Sciences, Northwest A&F University, Yangling, Shaanxi, 712100, China</p>
+          <!--<p>Room No.2216, State Key Laboratory of Crop Stress Biology for Arid Areas</p>-->
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-4 col-sm-12 footer-widget">
+          <h5 class="widget-title">Information</h5>
+          <ul>
+            <li> <a href="index">Home</a> </li>
+            <li> <a href="greeting">Contribute</a> </li>
+            <li> <a href="./static/download/SMILES.zip">2D structure files</a> </li>
+            <li> <a href="./static/download/mol2.zip">3D structure files</a> </li>
+            <li> <a href="help">Help</a> </li>
+            <li> <a href="citingus">Contact</a> </li>
+
+          </ul>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 d-none d-lg-block footer-widget">
+          <h5 class="widget-title">About Us</h5>
+          <ul>
+            <li> <a href="https://bioinfo.nwafu.edu.cn/" target="_blank">MaLab</a> </li>
+            <li> <a href="https://scholar.google.com/citations?user=UaWkSkIAAAAJ&hl=en" target="_blank">Google Scholar</a> </li>
+            <li> <a href="https://github.com/cma2015" target="_blank">Github </a></li>
+            <li> <a href="mailto:chuangma2006@gmail.com">Gmail</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="sigma_footer-bottom">
+    <div class="container">
+      <div class="sigma_footer-copyright">
+        <p> Copyright © 2020. All Rights Reserved. </p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- Footer End -->
+
+  <!-- Vendor Scripts -->
+  <script src="./static/assets/js2/plugins/jquery-3.4.1.min.js"></script>
+  <script src="./static/assets/js2/plugins/popper.min.js"></script>
+  <script src="./static/assets/js2/plugins/bootstrap.min.js"></script>
+  <script src="./static/assets/js2/plugins/imagesloaded.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.magnific-popup.min.js"></script>
+
+
+  <script src="./static/assets/js2/plugins/jquery.countdown.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.waypoints.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.counterup.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.zoom.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.inview.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.event.move.js"></script>
+
+  <script src="./static/assets/js2/plugins/wow.min.js"></script>
+  <script src="./static/assets/js2/plugins/isotope.pkgd.min.js"></script>
+  <script src="./static/assets/js2/plugins/slick.min.js"></script>
+  <script src="./static/assets/js2/plugins/ion.rangeSlider.min.js"></script>
+
+  <!-- Tilakam Scripts -->
+  <script src="./static/assets/js2/main.js"></script>
+
+  <script src="./static/assets/js2/structure.js"></script>
+
+  <script th:inline="text">
+    $(document).ready(function(){
+        // 获取参数
+        var min1 = [[${min1}]];
+/*        var max1 = [[${max1}]];*/
+    var lefile =`[[${lefile1}]]`;
+    var type = `[[${type}]]`
+      var fingerprint = `[[${fingerprint}]]`
+    // console.log(typeof)
+        console.log(min1,lefile);
+
+        // let lefile1 = window.location.href.split("lefile=")[1];
+        // let lefile = lefile1.split(".mol")[0];
+        // let min0 = window.location.href.split("min1=")[1];
+        // let min1 =min0.split("&")[0];
+    // let max1 = window.location.href.split("max1=")[1];
+        //
+        // 设置默认form表单中的值
+        let data = {
+            min1:min1,
+            fingerprint: fingerprint,
+/*      max1:max1,*/
+          lefile:lefile,
+          type: type
+        }
+        console.log(data,"页面进入的data")
+        // 进行ajax请求查询数据
+        $.ajax({
+            url: "http://39.101.176.205:4010/SMART/contructSearch?callback=?",
+            type: "get",
+            async: true,
+            dataType : 'jsonp',
+            jsonp:'callback',
+            data:data,
+            contentType:'application/json',
+            success: function(data){
+                console.log(data);
+
+                if(data==null||data.length<=0){
+
+                    $(".page").html("The query result is empty!~").css({
+                        "text-align":"center",
+                        "font-size":"32px",
+                        "color":"#b0b0b0",
+                        "font-family":'Arial","Microsoft YaHei","黑体","宋体",sans-serif"'
+
+                    });
+
+                }else{
+                    var obj_1={
+                        obj_box:'.page',//翻页容器
+                    };
+
+                    page_ctrl2(obj_1,data);
+                }
+            }
+
+        })
+
+        // form表单查询
+        function getFormInfo(){
+
+            let data = {};
+
+            let t = $('form').serializeArray();
+            $.each(t, function() {
+                data[this.name] = this.value;
+            });
+            JSON.stringify(data);
+            console.log(JSON.stringify(data));
+            // 进行ajax请求查询数据
+            $.ajax({
+                url: "http://39.101.176.205:4010/SMART/contructSearch?callback=a&&text_name=PISM00001",
+                type: "post",
+                async: true,
+                dataType : 'jsonp',
+                jsonp:'callback',
+                data:data,
+                contentType:'application/json',
+                success: function(data){
+                    console.log(data);
+
+                    if(data==null||data.length<=0){
+
+                        $(".page").html("The query result is empty!~").css({
+                            "text-align":"center",
+                            "font-size":"32px",
+                            "color":"#b0b0b0",
+                            "font-family":'Arial","Microsoft YaHei","黑体","宋体",sans-serif"',
+                            "margin-top":"100px",
+                            "margin-bottom":"80px"
+                        });
+
+                    }else{
+                        var obj_1={
+                            obj_box:'.page',//翻页容器
+                        };
+
+                        page_ctrl2(obj_1,data);
+
+
+                    }
+                }
+
+            })
+
+        }
+
+    })
+</script>
+  
+</body>
+
+</html>

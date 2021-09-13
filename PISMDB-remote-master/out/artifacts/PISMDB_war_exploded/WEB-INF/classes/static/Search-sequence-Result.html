@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search-structure-Result</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- Fonts-->
+		<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+		<!-- 引入fonts -->
+		<link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+		<!-- Vendors-->
+		<link rel="stylesheet" type="text/css" href="./assets/vendors/bootstrap/bootstrap.min.css">
+		<!-- css -->
+		<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+		<!-- 引入js -->
+		<script src="./assets/vendors/_jquery/jquery-3.3.1.min.js"></script>
+		<script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- 定义头部 -->
+	<div class="head">
+		<div class="head-bg-img">
+			<img src="./assets/img/head-bg.png" alt="">
+		<div class="logo">
+			<img src="./assets/img/logo-shadow.png" alt="">
+		</div>
+		</div>
+		
+	<!-- 定义导航条 -->
+	<nav class="navbar navbar-default" role="navigation">
+	<ul class="nav navbar-nav">
+		<li><a href="/index">HOME</a></li>
+		<li class="dropdown dropdown-bg">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					BROWSE
+				</a>
+					<ul class="dropdown-menu">
+					<li><a href="./otherPage/browse-Compound.html">Commpound</a></li>
+					<li><a href="./Browse-Pathway.html">Pathway</a></li>
+					<li><a href="#">Target</a></li>
+				</ul>
+				
+			</li>
+		<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SEARCH</a>
+			<ul class="dropdown-menu">
+					<li><a href="./search-text.html">Text</a></li>
+					<li><a href="./Search-Structure.html">Structure</a></li>
+					<li><a href="#">Sequence</a></li>
+					
+			</ul>
+		</li>
+		<li><a href="./greeting">UPLOAD</a></li>
+		<li><a href="#">REFERENCES</a></li>
+		<li><a href="#">CITATION</a></li>
+		<li><a href="#">HELP</a></li>
+	</ul>
+	</nav>
+	</div>
+<!-- 定义头部结束 -->
+<div class="sequenceSearch">
+	<div class="search">
+	<!-- <img src="./assets/img/search.png" alt=""> -->
+	<form action="#">
+		<input type="text">
+		<input type="submit" value=" ">
+	</form>
+</div>
+</div>
+<div class="page"></div>
+<!-- 引入分页js -->
+<script src="./assets/vendors/_jquery/jquery-3.3.1.min.js"></script>
+<script src="./assets/js/compound.js"></script>
+<script>
+	$(document).ready(function(){
+		$.ajax({
+			url: "http://localhost:8080/Test_search",
+			type: "get",
+			async: true,
+			dataType: "json",
+			success: function(data){
+			    console.log(data);
+		  		var obj_1={
+					obj_box:'.page',//翻页容器
+				};
+			page_ctrl2(obj_1,data);
+		},
+		error: function(err){
+			alert("请求失败");
+			}
+		})
+
+		// $.ajax({
+		// 	url:"http://127.0.0.1:8080/Test_search",
+		// 	type:"get",
+		// 	dataType:"json",
+		// 	success:function (data) {
+		// 		console.log(data);
+		// 	},
+		// 	error:function (err) {
+		// 		alert("查询数据失败")
+		// 	}
+		// });
+	});
+</script>
+</body>
+</html>

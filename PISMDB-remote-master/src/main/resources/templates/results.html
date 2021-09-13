@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMART</title>
+  <!-- Vendor Stylesheets -->
+  <!--<link href="./static/assets/css/reset.css" rel="stylesheet" type="text/css">-->
+  <link rel="stylesheet" href="./static/assets/css2/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/assets/css2/plugins/animate.min.css">
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="./static/assets/fonts/flaticon/flaticon.css">
+  <link rel="stylesheet" href="./static/assets/css2/plugins/font-awesome.min.css">
+  <!-- Tilakam Style sheet -->
+  <link rel="stylesheet" href="./static/assets/css2/style.css">
+  <link rel="stylesheet" href="./static/assets/css2/responsive.css">
+  <!-- MyStyle -->
+  <!--<link rel="stylesheet" href="./static/assets/css2/mystyle.css">-->
+  <link rel="stylesheet" href="./static/assets/css2/mystyle.css">
+</head>
+
+<body>
+
+
+
+<!-- Header Start -->
+<header class="sigma_header header-1 can-sticky header-absolute header-light">
+
+  <!-- Middle Header Start -->
+  <div class="sigma_header-middle">
+    <div class="container">
+      <nav class="navbar">
+
+        <!-- Logo Start -->
+        <div class="sigma_logo-wrapper">
+          <a class="navbar-brand" href="index">
+            <img src="./static/assets/img/SMART_logo2.svg" alt="logo">
+          </a>
+        </div>
+        <!-- Logo End -->
+
+        <ul class="navbar-nav">
+          <li class="menu-item">
+            <a href="index">Home</a>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Browse</a>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="Browse_C">Molecule</a>
+              </li>
+              <li class="menu-item">
+                <a href="Browse_P">Pathway</a>
+              </li>
+              <li class="menu-item">
+                <a href="Browse_T">Target</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Search</a>
+            <ul class="sub-menu">
+              <li class="menu-item"> <a href="Search_text">Text</a> </li>
+              <li class="menu-item"> <a href="Search_Structure">Structure</a> </li>
+              <li class="menu-item"> <a href="Search_sequence">Sequence</a> </li>
+            </ul>
+          </li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Download</a>
+            <ul class="sub-menu">
+              <li class="menu-item"> <a href="./static/download/SMILES.zip">2D structure files</a> </li>
+              <li class="menu-item"> <a href="./static/download/mol2.zip">3D structure files</a> </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="greeting">Contribute</a>
+          </li>
+          <li class="menu-item">
+            <a href="help">Help</a>
+          </li>
+          <li class="menu-item">
+            <a href="citingus">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- Middle Header End -->
+
+</header>
+<!-- Header End -->
+
+
+  <!-- Banner Start -->
+  <div class="sigma_banner banner-3" style="height: 105px;background-image: url('./static/assets/img/head-stat.png');">
+  </div>
+  
+ <h1>Result</h1>
+<!--<p th:text="'PISMID: ' + ${compounds.PISMID}" />-->
+<!--<p th:text="'Version: ' + ${compounds.Version}" />-->
+<h4>
+    <span class="glyphicon glyphicon-saved"></span>
+    Insert into MySQL successfully!
+</h4>
+
+<a href="/index"><button type="button" class="btn btn-primary">Return to home</button></a>
+
+<footer class="sigma_footer sigma_footer-dark">
+
+  <!-- Middle Footer -->
+  <div class="sigma_footer-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 footer-widget">
+          <img src="./static/assets/img/SMART_logo2.svg" class="mb-4" alt="logo">
+          <p>The Ma Laboratory School of Life Sciences, Northwest A&F University, Yangling, Shaanxi, 712100, China</p>
+         <!-- <p>Room No.2216, State Key Laboratory of Crop Stress Biology for Arid Areas</p>-->
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-4 col-sm-12 footer-widget">
+          <h5 class="widget-title">Information</h5>
+          <ul>
+            <li> <a href="index">Home</a> </li>
+            <li> <a href="greeting">Contribute</a> </li>
+            <li> <a href="./static/download/SMILES.zip">2D structure files</a> </li>
+            <li> <a href="./static/download/mol2.zip">3D structure files</a> </li>
+            <li> <a href="help">Help</a> </li>
+            <li> <a href="citingus">Contact</a> </li>
+
+          </ul>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 d-none d-lg-block footer-widget">
+          <h5 class="widget-title">About Us</h5>
+          <ul>
+            <li> <a href="https://bioinfo.nwafu.edu.cn/" target="_blank">MaLab</a> </li>
+            <li> <a href="https://scholar.google.com/citations?user=UaWkSkIAAAAJ&hl=en" target="_blank">Google Scholar</a> </li>
+            <li> <a href="https://github.com/cma2015" target="_blank">Github </a></li>
+            <li> <a href="mailto:chuangma2006@gmail.com">Gmail</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="sigma_footer-bottom">
+    <div class="container">
+      <div class="sigma_footer-copyright">
+        <p> Copyright © 2020. All Rights Reserved. </p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- Footer End -->
+
+  <!-- Vendor Scripts -->
+  <script src="./static/assets/js2/plugins/jquery-3.4.1.min.js"></script>
+  <script src="./static/assets/js2/plugins/popper.min.js"></script>
+  <script src="./static/assets/js2/plugins/bootstrap.min.js"></script>
+  <script src="./static/assets/js2/plugins/imagesloaded.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.magnific-popup.min.js"></script>
+
+
+  <script src="./static/assets/js2/plugins/jquery.countdown.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.waypoints.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.counterup.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.zoom.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.inview.min.js"></script>
+  <script src="./static/assets/js2/plugins/jquery.event.move.js"></script>
+
+  <script src="./static/assets/js2/plugins/wow.min.js"></script>
+  <script src="./static/assets/js2/plugins/isotope.pkgd.min.js"></script>
+  <script src="./static/assets/js2/plugins/slick.min.js"></script>
+  <script src="./static/assets/js2/plugins/ion.rangeSlider.min.js"></script>
+
+  <!-- Tilakam Scripts -->
+  <script src="./static/assets/js2/main.js"></script>
+  
+</body>
+
+</html>

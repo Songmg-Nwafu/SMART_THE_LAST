@@ -1,0 +1,51 @@
+#	Name:			PISM00010
+#	Creating user name:	baoopengkun
+#	Creation time:		Thu Nov 15 10:59:29 2018
+
+#	Modifying user name:	baoopengkun
+#	Modification time:	Thu Nov 15 11:01:47 2018
+
+@<TRIPOS>MOLECULE
+PISM00010
+   13    13     1     2     0
+SMALL
+GAST_HUCK
+
+
+@<TRIPOS>ATOM
+      1 C1         -2.5266    8.5676    3.5542 C.ar      1 <1>         0.0761 
+      2 C2         -2.9281    9.8462    3.9517 C.ar      1 <1>        -0.0366 
+      3 C3         -4.2879   10.1581    4.0397 C.ar      1 <1>        -0.0524 
+      4 C4         -5.2465    9.1890    3.7293 C.ar      1 <1>        -0.0366 
+      5 C5         -4.8467    7.9100    3.3317 C.ar      1 <1>         0.0761 
+      6 C6         -3.4862    7.5989    3.2440 C.ar      1 <1>         0.1227 
+      7 Cl7        -0.8186    8.1890    3.4477 Cl        1 <1>        -0.0591 
+      8 C8         -3.0732    6.2811    2.8345 C.1       1 <1>         0.1000 
+      9 N9         -2.7411    5.2222    2.5053 N.1       1 <1>        -0.3293 
+     10 Cl10       -6.0582    6.7037    2.9453 Cl        1 <1>        -0.0591 
+     11 H1         -2.1813   10.5965    4.1921 H         1 <1>         0.0648 
+     12 H2         -4.5993   11.1518    4.3486 H         1 <1>         0.0687 
+     13 H3         -6.3032    9.4282    3.7965 H         1 <1>         0.0648 
+@<TRIPOS>BOND
+     1    2    1 ar   
+     2    2    3 ar   
+     3    3    4 ar   
+     4    4    5 ar   
+     5    5    6 ar   
+     6    1    6 ar   
+     7    1    7 1    
+     8    6    8 1    
+     9    8    9 3    
+    10    5   10 1    
+    11    2   11 1    
+    12    3   12 1    
+    13    4   13 1    
+@<TRIPOS>SUBSTRUCTURE
+     1 ****        2 TEMP              0 ****  ****    0 ROOT 
+@<TRIPOS>NORMAL
+@<TRIPOS>FF_PBC
+FORCE_FIELD_SETUP_FEATURE Force Field Setup information
+v1.0  0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 NONE 0 0 0 0 1 0 0 0 0 0 0 0 0
+@<TRIPOS>RENDERING_ATTRS
+BALL_AND_STICK  
+*

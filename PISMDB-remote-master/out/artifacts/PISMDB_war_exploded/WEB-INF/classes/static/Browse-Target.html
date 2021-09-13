@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Browse-target</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- Fonts-->
+		<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+		<!-- 引入fonts -->
+		<link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+		<!-- Vendors-->
+		<link rel="stylesheet" type="text/css" href="./assets/vendors/bootstrap/bootstrap.min.css">
+		<!-- css -->
+		<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+		<style>
+/*.page_ctrl{
+  /*text-align: center;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+
+.page_ctrl *{
+  line-height: 26px;
+}
+.page_ctrl i{
+	text-align: center;
+	line-height: 26px;
+	font-weight: bold;
+}
+.fa-lg {
+    font-size: 1.33333333em;
+    line-height: 26px;
+    vertical-align: -0%;
+    text-align: center;
+}
+.page_ctrl button{
+  margin:0 3px;
+  min-width:26px;
+  font-weight: bold;
+  background: none;
+  border-width: 0px;
+  border-radius: 50%;
+  color: #5e5e5e;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+}
+
+.page_ctrl button:hover{
+  background: #0eb0d2;
+  color: #ffffff;
+}
+
+.page_ctrl .btn_dis{
+  cursor: default;
+  opacity: .7;
+  background: #eeeeee;
+  color: #5e5e5e;
+}
+
+.page_ctrl .btn_dis:hover{
+  background: #eeeeee;
+  color: #5e5e5e;
+}
+
+.page_ctrl .current_page{
+  background: #0eb0d2;
+  color: #ffffff;
+}
+
+.page_ctrl .input_page_num{
+  width:30px;
+  height: 26px;
+  margin:0 3px;
+  padding: 0;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  color: #5e5e5e;
+  outline: none;
+}
+.page_ctrl .page_total,.page_ctrl .page_text{
+  color: #2b2b2b;
+  font-size: 13px;
+}*/*/
+</style>
+
+</head>
+<body>
+	<!-- 定义头部 -->
+	<div class="head">
+		<div class="head-bg-img">
+			<img src="./assets/img/head-bg.png" alt="">
+		<div class="logo">
+			<img src="./assets/img/logo-shadow.png" alt="">
+		</div>
+		</div>
+		
+	<!-- 定义导航条 -->
+	<nav class="navbar navbar-default" role="navigation">
+	<ul class="nav navbar-nav">
+		<li><a href="/index">HOME</a></li>
+		<li class="dropdown dropdown-bg">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					BROWSE
+				</a>
+					<ul class="dropdown-menu">
+					<li><a href="./otherPage/browse-Compound.html">Commpound</a></li>
+					<li><a href="./Browse-Pathway.html">Pathway</a></li>
+					<li><a href="#">Target</a></li>
+				</ul>
+				
+			</li>
+		<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SEARCH</a>
+			<ul class="dropdown-menu">
+					<li><a href="./search-text.html">Text</a></li>
+					<li><a href="./Search-Structure.html">Structure</a></li>
+					<li><a href="#">Sequence</a></li>
+					
+			</ul>
+		</li>
+		<li><a href="./greeting">UPLOAD</a></li>
+		<li><a href="#">REFERENCES</a></li>
+		<li><a href="#">CITATION</a></li>
+		<li><a href="#">HELP</a></li>
+	</ul>
+		
+	</nav>
+	</div>
+<!-- 定义头部结束 -->
+<!-- 内容定义开始 -->
+<div class="page"></div>
+<!-- 引入分页js -->
+<script src="./assets/vendors/_jquery/jquery-3.3.1.min.js"></script>
+<script src="./assets/js/fPage.js"></script>
+<!--插件使用-->
+ <script>
+
+$.ajax({
+    url: "/browse-T",//写from 中的action
+    type: "get",
+    async: true,
+    contentType:'application/json',
+	success: function(data){
+      //  console.log(data[0]);
+		  var obj_1={
+				obj_box:'.page',//翻页容器
+				total_item:72//条目总数
+					 /*per_num:10,//每页条目数
+				current_page:8//当前页*/
+				};
+		page_ctrl(obj_1,data);
+	},
+	error: function(err){
+		alert("请求失败");
+	}
+});
+</script>
+
+</body>
+</html>

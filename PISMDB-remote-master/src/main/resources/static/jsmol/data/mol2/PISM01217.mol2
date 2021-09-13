@@ -1,0 +1,25 @@
+#	Name:			PISM01218
+#	Creating user name:	14062
+#	Creation time:		Sun Oct 20 21:12:30 2019
+
+#	Modifying user name:	14062
+#	Modification time:	Sun Oct 20 21:12:57 2019
+
+@<TRIPOS>MOLECULE
+PISM01218
+    2     1     1     1     0
+SMALL
+GAST_HUCK
+
+
+@<TRIPOS>ATOM
+      1 O           0.5285    0.0000    0.0000 O.3       1 <1>        -1.2587 
+      2 C          -0.5285    0.0000    0.0000 C.2       1 <1>        -1.7413 
+@<TRIPOS>BOND
+     1    1    2 3    
+@<TRIPOS>SUBSTRUCTURE
+     1 ****        1 TEMP              0 ****  ****    0 ROOT 
+@<TRIPOS>NORMAL
+@<TRIPOS>FF_PBC
+FORCE_FIELD_SETUP_FEATURE Force Field Setup information
+v1.0  0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 NONE 0 0 0 0 1 0 0 0 0 0 0 0 0

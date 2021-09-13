@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nwafu.PISMDB.dao.PathwaysDao">
+    <resultMap id="PathwayMap" type="com.nwafu.PISMDB.entity.Pathways">
+        <id column="PathwayID" property="pathwayID" jdbcType="VARCHAR"></id>
+        <result column="PathwayName" property="pathwayName" jdbcType="VARCHAR"></result>
+    </resultMap>
+    <select id="getPathwaysByPathwayID" parameterType="string" resultMap="PathwayMap">
+        select *
+        from pathway
+        where PathwayID=#{pathwayId}
+    </select>
+    <select id="getPathwaysCount" resultType="java.lang.Integer">
+        select count(*)
+        from pathway
+    </select>
+
+
+    <resultMap id="Pathway" type="com.nwafu.PISMDB.entity.CompoundsPathway">
+        <id column="PISMID" property="pismid" jdbcType="VARCHAR"></id>
+        <result column="PathwayID" property="pathwayID" jdbcType="VARCHAR"></result>
+        <result column="PathwayName" property="pathwayName" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="getPathwaysByPISMID" parameterType="string" resultMap="Pathway">
+        select PathwayID
+        from pathway
+        where PISMID=#{pismid} limit 1
+    </select>
+
+    <resultMap id="PicturesMap" type="com.nwafu.PISMDB.entity.Pictures">
+        <id column="id" property="id" jdbcType="INTEGER"></id>
+        <result column="picturesid" property="picturesid" jdbcType="INTEGER"></result>
+        <result column="startX" property="startX" jdbcType="FLOAT"></result>
+        <result column="startY" property="startY" jdbcType="FLOAT"></result>
+        <result column="endX" property="endX" jdbcType="FLOAT"></result>
+        <result column="endY" property="endY" jdbcType="FLOAT"></result>
+        <result column="information" property="information" jdbcType="VARCHAR"></result>
+        <result column="type" property="type" jdbcType="VARCHAR"></result>
+        <result column="ProteinTargetID" property="proteinTargetID" jdbcType="VARCHAR"></result>
+        <result column="ProteinName" property="proteinName" jdbcType="VARCHAR"></result>
+        <result column="MolecularPISMID" property="molecularPISMID" jdbcType="VARCHAR"></result>
+        <result column="GroupName" property="groupName" jdbcType="VARCHAR"></result>
+        <result column="PathwayID" property="pathwayID" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="showPictureInformation" parameterType="int" resultMap="PicturesMap">
+        select *
+        from places
+        where picturesid=#{picturesid}
+    </select>
+
+
+    <select id="showAllPictureInformation"  resultMap="PicturesMap">
+        select *
+        from places
+    </select>
+
+
+    <resultMap id="PicturesMap2" type="com.nwafu.PISMDB.entity.Pic">
+        <id column="id" property="id" jdbcType="INTEGER"></id>
+        <result column="desc" property="desc" jdbcType="VARCHAR"></result>
+        <result column="url" property="url" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="getPicturesCount" resultType="java.lang.Integer">
+        select count(*)
+        from pictures
+    </select>
+
+
+    <select id="showPictures" resultMap="PicturesMap2">
+        select *
+        from pictures
+    </select>
+
+    <select id="getAllMolecularPISMID" resultType="java.lang.String">
+        select MolecularPISMID
+        from places
+    </select>
+    <!--<select id="getPathwaysByTargetId" parameterType="string" resultMap="PathwayMap">-->
+        <!--select *-->
+        <!--from pathway-->
+        <!--where TargetID="%"#{targetId}"%"-->
+    <!--</select>-->
+</mapper>

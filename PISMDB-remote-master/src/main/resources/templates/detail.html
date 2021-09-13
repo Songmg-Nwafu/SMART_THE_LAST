@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART</title>
+    <!-- Vendor Stylesheets -->
+    <!--<link href="./static/assets/css/reset.css" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" href="./static/assets/css2/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/assets/css2/plugins/animate.min.css">
+    <!-- Icon Fonts -->
+    <link rel="stylesheet" href="./static/assets/fonts/flaticon/flaticon.css">
+    <link rel="stylesheet" href="./static/assets/css2/plugins/font-awesome.min.css">
+    <!-- Tilakam Style sheet -->
+    <link rel="stylesheet" href="./static/assets/css2/style.css">
+    <link rel="stylesheet" href="./static/assets/css2/responsive.css">
+    <!-- MyStyle -->
+    <!--<link rel="stylesheet" href="./static/assets/css2/mystyle.css">-->
+    <link rel="stylesheet" type="text/css" href="./static/assets/css2/reset.css">
+    <link rel="stylesheet" href="./static/assets/css2/main.css">
+    <link rel="stylesheet" type="text/css" href="./static/assets/css2/detail.css">
+    <style>
+
+        #structure img {
+            width: 80%;
+            height: 100%;
+        }
+    </style>
+    <script type="text/javascript" src="./static/jsmol/JSmol.min.js"></script>
+
+    <script type="text/javascript">
+        Jmol._isAsync = false;
+        var jmolApplet0;
+        var s = document.location.search;
+        Jmol._debugCode = (s.indexOf("debugcode") >= 0);
+        jmol_isReady = function (applet) {
+            /* document.title = (applet._id + " - Jmol " + Jmol.___JmolVersion)*/
+            Jmol._getElement(applet, "appletdiv").style.border = "1px solid blue"
+        }
+        var pid = "PIS" + window.location.href.split("id=")[1];
+        var Info = {
+            width: 600,
+            height: 300,
+            debug: false,
+            color: "0xFFFFFF",
+            addSelectionOptions: false,
+            use: "HTML5",
+            j2sPath: "./static/jsmol/j2s",
+            jarPath: "./static/jsmol/java",
+            jarFile: "JmolAppletSigned.jar",
+            isSigned: true,
+            script: "set zoomlarge false;set antialiasDisplay;load ./static/jsmol/data/mol2/" + pid + ".mol2",
+            serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+            readyFunction: jmol_isReady,
+            disableJ2SLoadMonitor: true,
+            disableInitialConsole: true,
+            allowJavaScript: true
+        }
+        $(document).ready(function () {
+            let pid = window.location.href.split("id=")[1];
+            console.log("pid:" + pid);
+            $("#appdiv").html(Jmol.getAppletHtml("jmolApplet0", Info))
+        })
+        var lastPrompt = 0;
+    </script>
+
+</head>
+
+<body>
+
+
+<!-- Header Start -->
+<header class="sigma_header header-1 can-sticky header-absolute header-light">
+
+    <!-- Middle Header Start -->
+    <div class="sigma_header-middle">
+        <div class="container">
+            <nav class="navbar">
+
+                <!-- Logo Start -->
+                <div class="sigma_logo-wrapper">
+                    <a class="navbar-brand" href="index">
+                        <img src="./static/assets/img/SMART_logo2.svg" alt="logo">
+                    </a>
+                </div>
+                <!-- Logo End -->
+
+                <ul class="navbar-nav">
+                    <li class="menu-item">
+                        <a href="index">Home</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">Browse</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="Browse_C">Molecule</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="Browse_P">Pathway</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="Browse_T">Target</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">Search</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="Search_text">Text</a></li>
+                            <li class="menu-item"><a href="Search_Structure">Structure</a></li>
+                            <li class="menu-item"><a href="Search_sequence">Sequence</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="#">Download</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="./static/download/SMILES.zip">2D structure files</a></li>
+                            <li class="menu-item"><a href="./static/download/mol2.zip">3D structure files</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="greeting">Contribute</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="help">Help</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="citingus">Contact</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Middle Header End -->
+
+</header>
+<!-- Header End -->
+
+
+<!-- Banner Start -->
+<div class="sigma_banner banner-3" style="height: 105px;background-image: url('./static/assets/img/head-stat.png');">
+</div>
+
+<!-- 定义实体开始 -->
+<div class="container detail_content">
+    <div class="d_title" id="tittle">
+    </div>
+    <!--div class="recordInformation content_box">
+      <div class="box_title">Record Information</div>
+      <div class="box_item">
+        <div class="box_name">Version</div>
+        <div class="box_value" id="version"></div>
+      </div>
+      <div class="box_item">
+        <div class="box_name">PISMD ID</div>
+        <div class="box_value" id="pismdid"></div>
+      </div>
+      <div class="box_item">
+        <div class="box_name">Creation Date</div>
+        <div class="box_value" id="creationDate"></div>
+      </div>
+    </div>-->
+    <div class="identification content_box">
+        <div class="box_title">Identification</div>
+        <div class="box_item">
+            <div class="box_name">IUPAC Name</div>
+            <div class="box_value" id="iupacName"></div>
+        </div>
+        <div class="box_item">
+            <div class="box_name">Chemical Name</div>
+            <div class="box_value" id="chemicalName"></div>
+        </div>
+        <div class="box_item">
+            <div class="box_name">Chemical Formula</div>
+            <div class="box_value" id="chemicalFormula"></div>
+        </div>
+        <div class="box_item">
+            <div class="box_name">SMILES</div>
+            <div class="box_value" id="smile"></div>
+        </div>
+        <div class="box_item">
+            <div class="box_name">Molecular Weight</div>
+            <div class="box_value" id="molecularWeight"></div>
+        </div>
+        <!--<div class="box_item structure">
+          <div class="box_name">Structure</div>
+          <div class="box_value" id="structure"></div>
+        </div>-->
+        <div class="box_item tdstructure">
+            <div class="box_name">3D Structure</div>
+            <div class="box_value" id="appdiv"></div>
+        </div>
+        <div class="box_item">
+            <div class="box_name">Data Source</div>
+            <div class="box_value" id="datasource"></div>
+        </div>
+        <div class="box_item">
+            <div class="box_name">Download</div>
+            <div class="box_value" id="download"></div>
+        </div>
+    </div>
+    <div class="target content_box">
+        <div class="box_title">Targeting Protein</div>
+        <div class="box_item">
+            <div class="box_name">Protein Name</div>
+            <div class="box_value" id="proteinName"></div>
+        </div>
+        <div class="box_item">
+            <div class="box_name">Uniprot ID</div>
+            <div class="box_value" id="uniprotID"></div>
+        </div>
+        <div class="box_item">
+            <div class="box_name">Organism</div>
+            <div class="box_value" id="organism"></div>
+        </div>
+        <div class="box_item">
+            <div class="box_name">Pathway</div>
+            <div class="box_value" id="pathway"></div>
+        </div>
+        <div class="box_item">
+            <div class="box_name">Sequence</div>
+            <div class="box_value" id="sequence"></div>
+        </div>
+    </div>
+    <div class="effect content_box">
+        <div class="box_title">Effect</div>
+
+        <div class="box_item">
+            <div class="box_name">Function & Phenotype</div>
+            <div class="box_value" id="function"></div>
+        </div>
+    </div>
+    <div class="reference content_box">
+        <div class="box_title">Reference</div>
+        <div class="box_item">
+
+            <div class="box_value" id="essayName"></div>
+        </div>
+    </div>
+    <div class="reference content_box">
+        <div class="box_title">Correction</div>
+        <div class="box_item">
+            <div class="box_value" id="correction"></div>
+        </div>
+    </div>
+</div>
+<div style="height: 30px"></div>
+<!-- 定义实体结束 -->
+<footer class="sigma_footer sigma_footer-dark">
+
+    <!-- Middle Footer -->
+    <div class="sigma_footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 footer-widget">
+                    <img src="./static/assets/img/SMART_logo2.svg" class="mb-4" alt="logo">
+                    <p>The Ma Laboratory School of Life Sciences, Northwest A&F University, Yangling, Shaanxi, 712100,
+                        China</p>
+                    <!--<p>Room No.2216, State Key Laboratory of Crop Stress Biology for Arid Areas</p>-->
+                </div>
+                <div class="col-xl-4 col-lg-3 col-md-4 col-sm-12 footer-widget">
+                    <h5 class="widget-title">Information</h5>
+                    <ul>
+                        <li><a href="index">Home</a></li>
+                        <li><a href="greeting">Contribute</a></li>
+                        <li><a href="./static/download/SMILES.zip">2D structure files</a></li>
+                        <li><a href="./static/download/mol2.zip">3D structure files</a></li>
+                        <li><a href="help">Help</a></li>
+                        <li><a href="citingus">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 d-none d-lg-block footer-widget">
+                    <h5 class="widget-title">About Us</h5>
+                    <ul>
+                        <li><a href="https://bioinfo.nwafu.edu.cn/" target="_blank">MaLab</a></li>
+                        <li><a href="https://scholar.google.com/citations?user=UaWkSkIAAAAJ&hl=en" target="_blank">Google
+                            Scholar</a></li>
+                        <li><a href="https://github.com/cma2015" target="_blank">Github </a></li>
+                        <li><a href="mailto:chuangma2006@gmail.com">Gmail</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="sigma_footer-bottom">
+        <div class="container">
+            <div class="sigma_footer-copyright">
+                <p> Copyright © 2020. All Rights Reserved. </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- Footer End -->
+
+<!-- Vendor Scripts -->
+<script src="./static/assets/js2/plugins/jquery-3.4.1.min.js"></script>
+<script src="./static/assets/js2/plugins/popper.min.js"></script>
+<script src="./static/assets/js2/plugins/bootstrap.min.js"></script>
+<script src="./static/assets/js2/plugins/imagesloaded.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.magnific-popup.min.js"></script>
+
+
+<script src="./static/assets/js2/plugins/jquery.countdown.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.waypoints.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.counterup.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.zoom.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.inview.min.js"></script>
+<script src="./static/assets/js2/plugins/jquery.event.move.js"></script>
+
+<script src="./static/assets/js2/plugins/wow.min.js"></script>
+<script src="./static/assets/js2/plugins/isotope.pkgd.min.js"></script>
+<script src="./static/assets/js2/plugins/slick.min.js"></script>
+<script src="./static/assets/js2/plugins/ion.rangeSlider.min.js"></script>
+
+<!-- Tilakam Scripts -->
+<script src="./static/assets/js2/main.js"></script>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        let pimsid = window.location.href.split("id=")[1]
+        $.ajax({
+            url: "http://39.101.176.205:4010/SMART/compoundInfomationByPismid?callback=?",
+            type: "get",
+            async: true,
+            dataType: "jsonp",  //数据格式设置为jsonp
+            jsonp: "callback",
+            data: {
+                pismid: pimsid
+            },
+            contentType: 'application/json',
+            success: function (data) {
+                console.log(data);
+                $("#tittle").text(data.compounds.pismid);
+                $("#iupacName").text(data.compounds.iUPAC_Name);
+                $("#chemicalName").text(data.compounds.chemicalNames);
+                $("#chemicalFormula").text(data.compounds.chemicalFormular);
+                $("#smile").text(data.compounds.smiles);
+                $("#molecularWeight").text(data.compounds.molecularWeight);
+                /*$("#structure").html("<img style='object-fit: contain' src='"+data.compounds.structure+"'>");*/
+                /*
+                 var myfunction =items.supporting.function.charAt(0).toUpperCase() + items.supporting.function.slice(1).toLowerCase();
+                  var mymechanism =items.supporting.mechanism.charAt(0).toUpperCase() + items.supporting.mechanism.slice(1).toLowerCase();
+                  var myphenotype =items.supporting.phenotype.charAt(0).toUpperCase() + items.supporting.phenotype.slice(1).toLowerCase();
+                  $(b[index]).parent().next().empty().append('<ul><li>Function <span id="Function">'+myfunction+'</span></li><li>Mechanism <span id="Mechanism">'+mymechanism+'</span></li><li>Phenotype <span id="Phenotype">'+myphenotype+'</span></li></ul>');
+
+                 */
+                var smileslink = data.compounds.smiles;
+                var chemspider;
+                var pubchem;
+                if (data.compounds.chemSpider == undefined){
+                    chemspider = "Query in ChemSpider";
+                } else {
+                    chemspider = data.compounds.chemSpider;
+                }
+                var chemarr = chemspider.split('%%')
+                var chemitem = '<li>ChemSpider <span id="ChemSpider">'
+                for (var i = 0; i < chemarr.length; i++){
+                    chemitem += '<a target="_blank" href="http://www.chemspider.com/Search.aspx?q='+smileslink+'">'+chemarr[i]+'</a>&nbsp;&nbsp;'
+                }
+                chemitem+='</span></li>'
+                if (data.compounds.pubChem == undefined){
+                    pubchem = "Query in PubChem";
+                } else {
+                    pubchem =  data.compounds.pubChem;
+                }
+                var string = '<ul>';
+                string += chemitem;
+                string += '<li>PubChem <span id="pubchem"><a target="_blank" href="https://pubchem.ncbi.nlm.nih.gov/#query='+smileslink+'">'+pubchem+'</a></span></li>';
+                string += '</ul>';
+                $("#datasource").html(string);
+
+                let file_name = data.compounds.threeD_Structure.substr(3);
+                let download = '<a href="./static/jsmol/data/mol2/'+data.compounds.threeD_Structure+'">'+file_name+'</a>'
+                $("#download").html(download);
+
+                $("#function").text(data.compounds.function.charAt(0).toUpperCase() + data.compounds.function.slice(1).toLowerCase());
+                var a = "<ul>";
+                for (var i = 0; i < data.pathwaysList.length; i++) {
+                    a += '<li><a href="pdetail?id=' + data.pathwaysList[i].pathwayID + '">' + data.pathwaysList[i].pathwayID + '：' + data.pathwaysList[i].pathwayName + '</a></li>'
+                }
+                a += "</ul>";
+                $("#pathway").html(a);
+                $("#structuralSimilarity").text();
+                if (data.targetsList[0] != null) {
+                    var c = "<ul>";
+                    for (var i = 0; i < data.targetsList.length; i++) {
+                        c += '<li><a href="#">' + data.targetsList[i].targetID + '：' + data.targetsList[i].proteinName + '</a></li>'
+                    }
+                    c += "</ul>";
+                    var d = "<ul>";
+                    for (var i = 0; i < data.targetsList.length; i++) {
+                        d += '<li><a href="#">' + data.targetsList[i].targetID + '：' + data.targetsList[i].uniprotID + '</a></li>'
+                    }
+                    d += "</ul>";
+                    var e = "<ul>";
+                    for (var i = 0; i < data.targetsList.length; i++) {
+                        e += '<li><a href="#">' + data.targetsList[i].targetID + '：' + data.targetsList[i].organisml + '</a></li>'
+                    }
+                    e += "</ul>";
+                    var f = "<ul>";
+                    for (var i = 0; i < data.targetsList.length; i++) {
+                        f += '<li><a href="./static/fasta/' + data.targetsList[i].sequencel + '">' + data.targetsList[i].targetID + '：' + data.targetsList[i].sequencel + '</a></li>'
+                    }
+                    f += "</ul>";
+                    $("#proteinName").html(c);
+                    $("#uniprotID").html(d);
+                    $("#organism").html(e);
+                    $("#sequence").html(f);
+                } else {
+                    $("#proteinName").text("");
+                    $("#uniprotID").text("");
+                    $("#organism").text("");
+                    $("#sequence").text("");
+                }
+                if (data.referenceList[0] != null) {
+                    var g = "<ul>";
+                    for (var i = 0; i < data.referenceList.length; i++) {
+                        g += '<li>' + '<strong>' + data.referenceList[i].referenceID + '</strong>' + '：' + data.referenceList[i].referenceName + '</li>'
+                    }
+                    g += "</ul>";
+                    $("#essayName").html(g);
+                } else {
+                    $("#essayName").text("NULL");
+                }
+
+                let edit = '<a target="_blank" href="correction?id=' + pimsid + '">'+"Edit"+'</a>'
+                for(let i = data.corInfoList.length - 1 ; i >= 0 ; i --){
+                    edit += '</br>' + data.corInfoList[i].cordate + "&nbsp;&nbsp;"+ data.corInfoList[i].username + "&nbsp;&nbsp;"+  data.corInfoList[i].department + "&nbsp;&nbsp;"+ data.corInfoList[i].supplementary;
+                }
+                $("#correction").html(edit);
+            }
+        })
+    })
+</script>
+</body>
+
+</html>

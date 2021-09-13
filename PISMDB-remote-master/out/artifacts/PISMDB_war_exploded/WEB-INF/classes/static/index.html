@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PISMDB</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--&lt;!&ndash; Fonts&ndash;&gt;-->
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" th:href="@{/assets/css/reset.css}">
+    <!--&lt;!&ndash; Vendors&ndash;&gt;-->
+    <link rel="stylesheet" type="text/css" href="./assets/vendors/bootstrap/bootstrap.min.css"
+          th:href="@{/assets/vendors/bootstrap/bootstrap.min.css}">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" th:href="@{/assets/css/main.css}">
+    <!-- 引入js -->
+    <script src="./assets/vendors/_jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./assets/vendors/_jquery/jquery.superslide.2.1.3.js"></script>
+    <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- 定义头部 -->
+<div class="head">
+    <div class="head-bg-img">
+        <img src="./assets/img/head-bg.png" alt="">
+        <div class="logo">
+            <img src="./assets/img/logo-shadow.png" alt="">
+        </div>
+    </div>
+
+    <!-- 定义导航条 -->
+    <nav class="navbar navbar-default" role="navigation">
+        <ul class="nav navbar-nav">
+            <li><a href="#">HOME</a></li>
+            <li class="dropdown dropdown-bg">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    BROWSE
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="./otherPage/browse-Compound.html">Commpound</a></li>
+                    <li><a href="./Browse-Pathway.html">Pathway</a></li>
+                    <li><a href="./Browse-Target.html">Target</a></li>
+                </ul>
+
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SEARCH</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Search-text.html">Text</a></li>
+                    <li><a href="./Search-Structure.html">Structure</a></li>
+                    <li><a href="./Search-Sequence.html">Sequence</a></li>
+
+                </ul>
+            </li>
+            <li><a href="./greeting">UPLOAD</a></li>
+            <li><a href="#">REFERENCES</a></li>
+            <li><a href="#">CITATION</a></li>
+            <li><a href="#">HELP</a></li>
+        </ul>
+
+    </nav>
+</div>
+
+<!-- 定义轮播图 -->
+<div class="aui-banner-slide">
+    <div class="aui-banner-main">
+        <div class="aui-banner-wrapper bd">
+            <ul>
+                <li>
+                    <img src="./assets/picture/banner001.png" alt="">
+                </li>
+                <li>
+                    <img src="./assets/picture/banner002.png" alt="">
+                </li>
+                <li>
+                    <img src="./assets/picture/banner003.png" alt="">
+                </li>
+                <li>
+                    <img src="./assets/picture/banner004.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="hd aui-banner-circle">
+            <ul>
+                <li class="on"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 定义底部 -->
+<div class="foot-statistics">
+    <div class="foot-stat-content">
+        <img src="./assets/img/statistics.png" alt="">
+        <ul>
+            <li class="stat1" th:text="${compoundsCount}"></li>
+            <li class="stat2" th:text="${targetsCount}"></li>
+            <li class="stat3" th:text="${pathwaysCount}"></li>
+        </ul>
+    </div>
+</div>
+<!-- 引入js -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".aui-banner-main").slide({
+            mainCell: ".bd ul",
+            effect: "left",
+            autoPlay: true,
+            trigger: "click",
+            delayTime: 700
+        });
+        //         $.ajax({
+        //         	url: "http://localhost:8081/PISMDB/data1.json",
+        // type: "get",
+        // async: true,
+        // dataType: "json",
+        // success: function(data){
+        // 	processData(data);
+        // 	// others(data);
+        // },
+        // error: function(err){
+        // 	alert("请求失败");
+        // }
+        //         })
+        // function Statistics(data){
+
+
+        // }
+    });
+</script>
+</body>
+</html>
